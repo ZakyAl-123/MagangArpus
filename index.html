@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dinas Arsip dan Perpustakaan Kota Semarang</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ========================= HEADER ========================= -->
+<header class="site-header">
+  <div class="container">
+    <a href="#" class="brand">
+      <div class="brand__logo" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></div>
+      <div class="brand__text">
+        <div class="brand__title">DINAS ARSIP DAN PERPUSTAKAAN</div>
+        <div class="brand__subtitle">KOTA SEMARANG</div>
+      </div>
+    </a>
+
+    <button class="nav-toggle" aria-label="Buka menu navigasi" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" aria-label="Navigasi utama">
+      <ul class="main-nav__list">
+        <li><a href="#" class="active">BERANDA</a></li>
+        <li><a href="#profil">PROFIL</a></li>
+        <li><a href="#ppid">PPID</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#kontak">KONTAK</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ========================= HERO ========================= -->
+<section class="hero">
+  <div class="container">
+    <div class="hero__inner">
+      <p class="hero__eyebrow">SELAMAT DATANG DI WEBSITE</p>
+      <h1 class="hero__title">DINAS ARSIP DAN PERPUSTAKAAN<br>KOTA SEMARANG</h1>
+
+      <div class="hero__card">
+        <div class="hero__card-media placeholder" aria-label="Foto gedung Arpus Kota Semarang">Foto Gedung</div>
+        <button class="hero__play" aria-label="Putar video">
+          <i class="fa-solid fa-play"></i>
+        </button>
+        <div class="hero__caption">
+          <div>
+            <div class="hero__caption-title">PAMERAN ARSIP KOTA</div>
+            <div class="hero__caption-sub">Mulai Pekan ini di Gedung Arpus</div>
+          </div>
+          <a href="#" class="btn btn--gold">Baca Selengkapnya</a>
+        </div>
+        <div class="hero__dots" data-dots>
+          <span class="active"></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= ADDRESS BAR ========================= -->
+<div class="address-bar">
+  Jl. Prof. Sudarto No. 116, Kel.Sumurboto, Kec. Banyumanik, Kota Semarang, Jawa Tengah 50269
+</div>
+
+<!-- ========================= MENU KAMI ========================= -->
+<section class="menu-kami">
+  <div class="container">
+    <h2 class="section-title">Menu <span class="accent">Kami</span></h2>
+
+    <div class="menu-grid">
+      <div class="menu-card">
+        <div class="menu-card__icon"><i class="fa-solid fa-book-open-reader"></i></div>
+        <h3 class="menu-card__title">AGENDA</h3>
+        <div class="menu-card__list">
+          <a href="#">ACARA DINAS</a>
+          <a href="#">ACARA PEMKOT</a>
+          <a href="#">ACARA PERPUSNAS</a>
+          <a href="#">ACARA ANRI</a>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card__icon"><i class="fa-solid fa-satellite-dish"></i></div>
+        <h3 class="menu-card__title">MEDIA SIAR</h3>
+        <div class="menu-card__list">
+          <a href="#">SOBAT BUKU</a>
+          <a href="#">VIDEO CONVERCE</a>
+          <a href="#">E-RADIO</a>
+          <a href="#">STREAMING</a>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card__icon"><i class="fa-solid fa-photo-film"></i></div>
+        <h3 class="menu-card__title">GALERY</h3>
+        <div class="menu-card__list">
+          <a href="#">FOTO</a>
+          <a href="#">VIDEO</a>
+          <a href="#">BROSUR/POSTER</a>
+          <a href="#">ARSIP DOKUMENTER</a>
+        </div>
+      </div>
+
+      <div class="menu-card menu-card--sibaja">
+        <div class="sibaja__title">Sibaja</div>
+        <div class="sibaja__sub">(Senarai Istilah Budaya Jawa)</div>
+        <div class="sibaja__search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <label for="sibaja-search" class="visually-hidden">Cari istilah budaya Jawa</label>
+          <input id="sibaja-search" type="text" placeholder="">
+          <i class="fa-solid fa-microphone"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= SEARCH BAR ========================= -->
+<section class="search-section">
+  <div class="container">
+    <form class="search-bar" role="search">
+      <div class="search-bar__input">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <label for="main-search" class="visually-hidden">Cari</label>
+        <input id="main-search" type="text" placeholder="Cari.....">
+      </div>
+      <button type="submit" class="btn btn--red">Cari</button>
+    </form>
+  </div>
+</section>
+
+<!-- ========================= GELIAT BERGEMA ========================= -->
+<section class="geliat">
+  <div class="container">
+    <h2 class="geliat__title">GELIAT BERGEMA</h2>
+    <p class="geliat__sub">Gerakan Literasi Atraktif Bergerak Bersama</p>
+    <p class="geliat__sub">Gerakan Peduli Arsip Terpadu Bergerak Bersama</p>
+
+    <div class="geliat__actions">
+      <a class="geliat__action" href="#">
+        <div class="geliat__action-icon"><i class="fa-solid fa-book"></i></div>
+        <span class="geliat__action-label">CARI BUKU</span>
+      </a>
+      <a class="geliat__action" href="#">
+        <div class="geliat__action-icon"><i class="fa-solid fa-box-archive"></i></div>
+        <span class="geliat__action-label">CARI ARSIP</span>
+      </a>
+      <a class="geliat__action" href="#">
+        <div class="geliat__action-icon"><i class="fa-solid fa-gavel"></i></div>
+        <span class="geliat__action-label">CARI PERATURAN</span>
+      </a>
+      <a class="geliat__action" href="#">
+        <div class="geliat__action-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+        <span class="geliat__action-label">USULAN BUKU</span>
+      </a>
+      <a class="geliat__action" href="#">
+        <div class="geliat__action-icon"><i class="fa-solid fa-layer-group"></i></div>
+        <span class="geliat__action-label">DONASI BUKU</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= BUKU TERBARU + TRENDING ========================= -->
+<section class="content-row-wrap">
+  <div class="container content-row">
+    <div class="buku-col">
+      <h3 class="subsection-title">Buku Terbaru</h3>
+      <div class="book-grid">
+        <article>
+          <div class="book-card__cover" style="background:#3f6b3a;">Pergi</div>
+          <p class="book-card__title">Pergi</p>
+        </article>
+        <article>
+          <div class="book-card__cover" style="background:#4a4f8f;">Pulang</div>
+          <p class="book-card__title">Pulang</p>
+        </article>
+        <article>
+          <div class="book-card__cover" style="background:#7a4a2a;">Tentang Kamu</div>
+          <p class="book-card__title">Tentang Kamu</p>
+        </article>
+        <article>
+          <div class="book-card__cover" style="background:#3a6f8f;">Rindu</div>
+          <p class="book-card__title">Rindu</p>
+        </article>
+        <article>
+          <div class="book-card__cover" style="background:#2f8fa8;">Hujan</div>
+          <p class="book-card__title">Hujan</p>
+        </article>
+      </div>
+      <div class="center-btn"><a href="#" class="btn btn--gold">Selengkapnya</a></div>
+
+      <h3 class="subsection-title" style="margin-top:36px;">Berita Terbaru</h3>
+      <div class="berita-grid">
+        <article>
+          <div class="berita-card__thumb placeholder">Foto Berita</div>
+          <p class="berita-card__title">Judul Berita</p>
+        </article>
+        <article>
+          <div class="berita-card__thumb placeholder">Foto Berita</div>
+          <p class="berita-card__title">Judul Berita</p>
+        </article>
+        <article>
+          <div class="berita-card__thumb placeholder">Foto Berita</div>
+          <p class="berita-card__title">Judul Berita</p>
+        </article>
+      </div>
+      <div class="center-btn"><a href="#" class="btn btn--gold">Selengkapnya</a></div>
+    </div>
+
+    <aside class="trending">
+      <div class="trending__header">Trending Hari Ini</div>
+      <div class="trending__item">
+        <div class="trending__thumb placeholder">Foto</div>
+        <div class="trending__label">Judul</div>
+      </div>
+      <div class="trending__item">
+        <div class="trending__thumb placeholder">Foto</div>
+        <div class="trending__label">Judul</div>
+      </div>
+      <div class="trending__dots" data-dots>
+        <span class="active"></span><span></span><span></span><span></span>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ========================= BERITA MEDIA ========================= -->
+<section class="container">
+  <div class="media-strip">
+    <div class="media-strip__title">Berita Media</div>
+    <div class="media-strip__logos">
+      <span><i class="fa-solid fa-d"></i> detikcom</span>
+      <span>Liputan6</span>
+      <span>KOMPAS.com</span>
+      <span>TribunJateng</span>
+      <span>SuaraMerdeka.com</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= LAYANAN PERPUSNAS ========================= -->
+<section class="layanan">
+  <div class="container">
+    <h2 class="layanan__title">LAYANAN PERPUSTAKAAN NASIONAL REPUBLIK INDONESIA</h2>
+    <div class="layanan__grid">
+      <a class="layanan__pill" href="#">
+        <i class="fa-solid fa-hand-pointer"></i>
+        <span>
+          <span class="layanan__pill-title">IPUSNAS :</span><br>
+          <span class="layanan__pill-sub">PERPUSTAKAAN DIGITAL BERGERAK</span>
+        </span>
+      </a>
+      <a class="layanan__pill" href="#">
+        <i class="fa-solid fa-hand-pointer"></i>
+        <span>
+          <span class="layanan__pill-title">OPAC :</span><br>
+          <span class="layanan__pill-sub">ONLINE PUBLIC ACCES CATALOG</span>
+        </span>
+      </a>
+      <a class="layanan__pill" href="#">
+        <i class="fa-solid fa-hand-pointer"></i>
+        <span>
+          <span class="layanan__pill-title">E-RES :</span><br>
+          <span class="layanan__pill-sub">KOLEKSI DIGITAL BERLANGGAN</span>
+        </span>
+      </a>
+      <a class="layanan__pill" href="#">
+        <i class="fa-solid fa-hand-pointer"></i>
+        <span>
+          <span class="layanan__pill-title">IOS :</span><br>
+          <span class="layanan__pill-sub">INDONESIA ONESEARCH BY PERPUSNAS</span>
+        </span>
+      </a>
+      <a class="layanan__pill" href="#">
+        <i class="fa-solid fa-hand-pointer"></i>
+        <span>
+          <span class="layanan__pill-title">ISBN :</span><br>
+          <span class="layanan__pill-sub">INTERNATIONAL STANDART BOOK NUMBER</span>
+        </span>
+      </a>
+      <a class="layanan__pill" href="#">
+        <i class="fa-solid fa-hand-pointer"></i>
+        <span>
+          <span class="layanan__pill-title">K-OL :</span><br>
+          <span class="layanan__pill-sub">KEANGGOTAAN ONLINE PERPUSNAS</span>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= APLIKASI KAMI ========================= -->
+<section class="aplikasi">
+  <div class="container">
+    <h2 class="aplikasi__title">APLIKASI KAMI</h2>
+    <div class="aplikasi__logos">
+      <div class="aplikasi__logo">
+        <div class="aplikasi__logo-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <span class="aplikasi__logo-name">SELARAS</span>
+      </div>
+      <div class="aplikasi__logo">
+        <div class="aplikasi__logo-icon"><i class="fa-solid fa-book-bookmark"></i></div>
+        <span class="aplikasi__logo-name">Si Booky</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= DATA LAINNYA / FAQ ========================= -->
+<section class="info-section" id="faq">
+  <div class="container info-grid">
+    <div class="info-col">
+      <h3 class="info-col__title">Data Lainnya</h3>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-item__btn" aria-expanded="false">
+            Keanggotaan Perpustakaan <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-item__panel">Informasi seputar pendaftaran dan keanggotaan perpustakaan.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-item__btn" aria-expanded="false">
+            Pustakawan <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-item__panel">Daftar dan profil pustakawan Dinas Arsip dan Perpustakaan.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-item__btn" aria-expanded="false">
+            Statistik <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-item__panel">Statistik kunjungan dan koleksi perpustakaan.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-item__btn" aria-expanded="false">
+            Survey Layanan <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-item__panel">Isi survey kepuasan layanan kami.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-item__btn" aria-expanded="false">
+            Sapa Mbak Ita <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-item__panel">Sampaikan aspirasi Anda melalui kanal Sapa Mbak Ita.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-col">
+      <h3 class="info-col__title">Pertanyaan Umum</h3>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-item__btn" aria-expanded="false">
+            Cara daftar anggota perpustakaan? <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-item__panel">Kunjungi loket keanggotaan dengan membawa KTP/KIA.</div>
+        </div>
+        <div class="accordion-item open">
+          <button class="accordion-item__btn" aria-expanded="true">
+            Cara mengajukan permohonan arsip? <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-item__panel">Ajukan online lewat menu Layanan Arsip, isi formulir, dan lacak status langsung.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-item__btn" aria-expanded="false">
+            Apa syarat booking ruang baca? <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-item__panel">Isi formulir pemesanan ruang melalui menu Pesan Ruang.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= MEDIA SOSIAL ========================= -->
+<section class="social-section">
+  <div class="container">
+    <h3 class="social-section__title">Media <span style="text-decoration:underline;">Sosial</span></h3>
+    <div class="social-icons">
+      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= FOOTER ========================= -->
+<footer class="site-footer" id="kontak">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer">
+        <div class="footer-brand">
+          <div class="footer-brand__logo" aria-hidden="true"></div>
+          <div class="footer-brand__title">DINAS ARSIP DAN PERPUSTAKAAN<br>KOTA SEMARANG</div>
+        </div>
+        <p>Badan Arsip dan Perpustakaan berkomitmen untuk mewujudkan layanan kearsipan yang atraktif dalam mendukung Semarang semakin hebat.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Tautan Cepat</h4>
+        <ul>
+          <li><a href="#">Semarang Kota <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+          <li><a href="#">SIPPN <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+          <li><a href="#">Prov. Jateng <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+          <li><a href="#">Perpusnas <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+          <li><a href="#">ANRI <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+          <li><a href="#">Arpus Jateng <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Layanan</h4>
+        <ul>
+          <li><a href="#">Form Permohonan Informasi <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+          <li><a href="#">Pengaduan Layanan Publik <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+          <li><a href="#">Pesan Ruang <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+          <li><a href="#">Survey Layanan <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <ul>
+          <li><a href="#"><i class="fa-solid fa-location-dot"></i> Jl. Prof. Sudarto No. 116, Kota Semarang, Jawa Tengah 50269</a></li>
+          <li><a href="tel:0247466215"><i class="fa-solid fa-phone"></i> 024 7466215</a></li>
+          <li><a href="mailto:dinas_arpus@semarangkota.go.id"><i class="fa-solid fa-envelope"></i> dinas_arpus@semarangkota.go.id</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2026 Badan Arsip dan Perpustakaan Kota Semarang. Seluruh hak cipta dilindungi Undang-Undang.
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
