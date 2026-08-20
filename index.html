@@ -1,498 +1,694 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dinas Arsip dan Perpustakaan Kota Semarang</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dinas Arsip dan Perpustakaan Kota Semarang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Open+Sans:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- ========================= ICON SPRITE (inline SVG, no external dependency) ========================= -->
-<svg style="display:none" aria-hidden="true">
-  <defs>
-    <symbol id="icon-play" viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5-13-7.5z" fill="currentColor"/></symbol>
-    <symbol id="icon-agenda" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="1.5"/><path d="M3 8h18"/><path d="M8 2.5v3M16 2.5v3"/><path d="M7 12h3M7 15h3M14 12h3M14 15h3"/></symbol>
-    <symbol id="icon-media" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6.5" width="14" height="10" rx="1.5"/><path d="M20.5 8.5l-3.5 2.5 3.5 2.5v-5z"/><path d="M6 20h6"/></symbol>
-    <symbol id="icon-galery" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="1.5"/><circle cx="8.5" cy="9.5" r="1.6"/><path d="M21 15.5l-5.5-5-9.5 9"/></symbol>
-    <symbol id="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></symbol>
-    <symbol id="icon-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v4M8.5 22h7"/></symbol>
-    <symbol id="icon-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4.5C6 3.6 9 3.4 12 4.6V20c-3-1.2-6-1-8-.1V4.5z"/><path d="M20 4.5C18 3.6 15 3.4 12 4.6V20c3-1.2 6-1 8-.1V4.5z"/></symbol>
-    <symbol id="icon-archive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3.5" width="18" height="5" rx="1"/><path d="M4.5 8.5v9a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-9"/><path d="M10 13h4"/></symbol>
-    <symbol id="icon-gavel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5l5 5"/><path d="M11.5 7.5l-7 7 3 3 7-7"/><path d="M6 19h8"/><path d="M17 3l4 4-2 2-4-4z"/></symbol>
-    <symbol id="icon-heart-hand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8.5c-1-2-4-2.3-5.3-.6-1.3 1.7-.4 3.6 1.3 5.1L12 16.5l4-3.5c1.7-1.5 2.6-3.4 1.3-5.1-1.3-1.7-4.3-1.4-5.3.6z"/><path d="M4 19c2-1.2 4-1.5 6-1l1 .3c1 .3 2 .3 3 0l4-1.3"/></symbol>
-    <symbol id="icon-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/><path d="M3 17.5l9 5 9-5"/></symbol>
-    <symbol id="icon-pointer" viewBox="0 0 24 24" fill="currentColor"><path d="M5 2.5l14 8-6 1.3 3.3 6-2.6 1.4-3.3-6L6 17.5V2.5z"/></symbol>
-    <symbol id="icon-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3.5h12v17l-6-4-6 4v-17z"/></symbol>
-    <symbol id="icon-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></symbol>
-    <symbol id="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></symbol>
-    <symbol id="icon-facebook" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V8c0-.9.3-1.5 1.6-1.5H16.7V3.7C16.4 3.6 15.4 3.5 14.3 3.5c-2.3 0-3.9 1.4-3.9 4v2.4H7.7v3.1h2.7V21h3.1z"/></symbol>
-    <symbol id="icon-x" viewBox="0 0 24 24" fill="currentColor"><path d="M4 3.5h4.2l4 5.4 4.6-5.4H19l-6.4 7.5L19.6 20.5h-4.2l-4.4-5.9-5 5.9H3.5l6.8-8-6.3-9z"/></symbol>
-    <symbol id="icon-youtube" viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.6a2.7 2.7 0 0 0-1.9-1.9C18 5.2 12 5.2 12 5.2s-6 0-7.7.5A2.7 2.7 0 0 0 2.4 7.6 28.6 28.6 0 0 0 2 12a28.6 28.6 0 0 0 .4 4.4 2.7 2.7 0 0 0 1.9 1.9C6 18.8 12 18.8 12 18.8s6 0 7.7-.5a2.7 2.7 0 0 0 1.9-1.9A28.6 28.6 0 0 0 22 12a28.6 28.6 0 0 0-.4-4.4zM10 15.2V8.8L15.5 12 10 15.2z"/></symbol>
-    <symbol id="icon-telegram" viewBox="0 0 24 24" fill="currentColor"><path d="M21 4L3 11.2c-.9.4-.9 1.5.1 1.8l4.3 1.4 1.7 5.3c.2.7 1.1.9 1.6.3l2.4-2.6 4.5 3.3c.7.5 1.7.1 1.9-.7L23 5.3c.2-.9-.7-1.6-1.5-1.3zM8 13.9l8.4-6.1c.3-.2.6.2.3.4l-6.9 6.6-.3 3.3-1.5-4.2z"/></symbol>
-    <symbol id="icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3"/><path d="M14 4h6v6"/><path d="M20 4l-9 9"/></symbol>
-    <symbol id="icon-location" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11.5A7 7 0 0 0 5 9.5C5 14.7 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></symbol>
-    <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4 5.7 2 2 0 0 1 6 3.5z"/></symbol>
-    <symbol id="icon-envelope" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5L12 13l8.5-6.5"/></symbol>
-    <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5.5c0 4.5-3 8-7 9.5-4-1.5-7-5-7-9.5V6l7-3z"/><path d="M9 12l2 2 4-4.5"/></symbol>
-  </defs>
-</svg>
+  <!-- ========================= ICON SPRITE (inline SVG, no external dependency) ========================= -->
+  <svg style="display:none" aria-hidden="true">
+    <defs>
+      <symbol id="icon-play" viewBox="0 0 24 24">
+        <path d="M7 4.5v15l13-7.5-13-7.5z" fill="currentColor" />
+      </symbol>
+      <symbol id="icon-agenda" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+        stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="14" rx="1.5" />
+        <path d="M3 8h18" />
+        <path d="M8 2.5v3M16 2.5v3" />
+        <path d="M7 12h3M7 15h3M14 12h3M14 15h3" />
+      </symbol>
+      <symbol id="icon-media" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+        stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2.5" y="6.5" width="14" height="10" rx="1.5" />
+        <path d="M20.5 8.5l-3.5 2.5 3.5 2.5v-5z" />
+        <path d="M6 20h6" />
+      </symbol>
+      <symbol id="icon-galery" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+        stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="16" rx="1.5" />
+        <circle cx="8.5" cy="9.5" r="1.6" />
+        <path d="M21 15.5l-5.5-5-9.5 9" />
+      </symbol>
+      <symbol id="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+        stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="7" />
+        <path d="M21 21l-4.3-4.3" />
+      </symbol>
+      <symbol id="icon-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+        stroke-linecap="round" stroke-linejoin="round">
+        <rect x="9" y="2" width="6" height="12" rx="3" />
+        <path d="M5 11a7 7 0 0 0 14 0" />
+        <path d="M12 18v4M8.5 22h7" />
+      </symbol>
+      <symbol id="icon-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 4.5C6 3.6 9 3.4 12 4.6V20c-3-1.2-6-1-8-.1V4.5z" />
+        <path d="M20 4.5C18 3.6 15 3.4 12 4.6V20c3-1.2 6-1 8-.1V4.5z" />
+      </symbol>
+      <symbol id="icon-archive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+        stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3.5" width="18" height="5" rx="1" />
+        <path d="M4.5 8.5v9a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-9" />
+        <path d="M10 13h4" />
+      </symbol>
+      <symbol id="icon-gavel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 5l5 5" />
+        <path d="M11.5 7.5l-7 7 3 3 7-7" />
+        <path d="M6 19h8" />
+        <path d="M17 3l4 4-2 2-4-4z" />
+      </symbol>
+      <symbol id="icon-heart-hand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path
+          d="M12 8.5c-1-2-4-2.3-5.3-.6-1.3 1.7-.4 3.6 1.3 5.1L12 16.5l4-3.5c1.7-1.5 2.6-3.4 1.3-5.1-1.3-1.7-4.3-1.4-5.3.6z" />
+        <path d="M4 19c2-1.2 4-1.5 6-1l1 .3c1 .3 2 .3 3 0l4-1.3" />
+      </symbol>
+      <symbol id="icon-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3l9 5-9 5-9-5 9-5z" />
+        <path d="M3 13l9 5 9-5" />
+        <path d="M3 17.5l9 5 9-5" />
+      </symbol>
+      <symbol id="icon-pointer" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M5 2.5l14 8-6 1.3 3.3 6-2.6 1.4-3.3-6L6 17.5V2.5z" />
+      </symbol>
+      <symbol id="icon-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 3.5h12v17l-6-4-6 4v-17z" />
+      </symbol>
+      <symbol id="icon-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 9l6 6 6-6" />
+      </symbol>
+      <symbol id="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+        <rect x="3" y="3" width="18" height="18" rx="5" />
+        <circle cx="12" cy="12" r="4.2" />
+        <circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none" />
+      </symbol>
+      <symbol id="icon-facebook" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M13.5 21v-8h2.7l.4-3.1h-3.1V8c0-.9.3-1.5 1.6-1.5H16.7V3.7C16.4 3.6 15.4 3.5 14.3 3.5c-2.3 0-3.9 1.4-3.9 4v2.4H7.7v3.1h2.7V21h3.1z" />
+      </symbol>
+      <symbol id="icon-x" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M4 3.5h4.2l4 5.4 4.6-5.4H19l-6.4 7.5L19.6 20.5h-4.2l-4.4-5.9-5 5.9H3.5l6.8-8-6.3-9z" />
+      </symbol>
+      <symbol id="icon-youtube" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M21.6 7.6a2.7 2.7 0 0 0-1.9-1.9C18 5.2 12 5.2 12 5.2s-6 0-7.7.5A2.7 2.7 0 0 0 2.4 7.6 28.6 28.6 0 0 0 2 12a28.6 28.6 0 0 0 .4 4.4 2.7 2.7 0 0 0 1.9 1.9C6 18.8 12 18.8 12 18.8s6 0 7.7-.5a2.7 2.7 0 0 0 1.9-1.9A28.6 28.6 0 0 0 22 12a28.6 28.6 0 0 0-.4-4.4zM10 15.2V8.8L15.5 12 10 15.2z" />
+      </symbol>
+      <symbol id="icon-telegram" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M21 4L3 11.2c-.9.4-.9 1.5.1 1.8l4.3 1.4 1.7 5.3c.2.7 1.1.9 1.6.3l2.4-2.6 4.5 3.3c.7.5 1.7.1 1.9-.7L23 5.3c.2-.9-.7-1.6-1.5-1.3zM8 13.9l8.4-6.1c.3-.2.6.2.3.4l-6.9 6.6-.3 3.3-1.5-4.2z" />
+      </symbol>
+      <symbol id="icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3" />
+        <path d="M14 4h6v6" />
+        <path d="M20 4l-9 9" />
+      </symbol>
+      <symbol id="icon-location" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 21s7-6.3 7-11.5A7 7 0 0 0 5 9.5C5 14.7 12 21 12 21z" />
+        <circle cx="12" cy="9.5" r="2.3" />
+      </symbol>
+      <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path
+          d="M6 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4 5.7 2 2 0 0 1 6 3.5z" />
+      </symbol>
+      <symbol id="icon-envelope" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+        stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="5" width="18" height="14" rx="2" />
+        <path d="M3.5 6.5L12 13l8.5-6.5" />
+      </symbol>
+      <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3l7 3v5.5c0 4.5-3 8-7 9.5-4-1.5-7-5-7-9.5V6l7-3z" />
+        <path d="M9 12l2 2 4-4.5" />
+      </symbol>
+    </defs>
+  </svg>
 
-<!-- ========================= HEADER ========================= -->
-<header class="site-header">
-  <div class="container">
-    <a href="#" class="brand">
-      <div class="brand__logo" aria-hidden="true">
-        <svg viewBox="0 0 100 118" xmlns="http://www.w3.org/2000/svg">
-          <path d="M50 2 L92 14 V56 C92 86 74 104 50 116 C26 104 8 86 8 56 V14 Z" fill="#1a1a1a"/>
-          <path d="M50 7 L87 18 V56 C87 83 71 99 50 110 C29 99 13 83 13 56 V18 Z" fill="#f4c430"/>
-          <path d="M50 13 L82 22 V56 C82 80 68 94 50 104 C32 94 18 80 18 56 V22 Z" fill="#c11f1f"/>
-          <path d="M50 34 L54 50 H64 L56 60 L59 76 L50 66 L41 76 L44 60 L36 50 H46 Z" fill="#f4c430"/>
-          <rect x="38" y="78" width="24" height="6" rx="1" fill="#f4c430"/>
-          <path d="M22 30 C22 30 18 45 24 58" stroke="#f4c430" stroke-width="2" fill="none"/>
-          <path d="M78 30 C78 30 82 45 76 58" stroke="#f4c430" stroke-width="2" fill="none"/>
-        </svg>
-      </div>
-      <div class="brand__text">
-        <div class="brand__title">DINAS ARSIP DAN PERPUSTAKAAN</div>
-        <div class="brand__subtitle">KOTA SEMARANG</div>
-      </div>
-    </a>
+  <!-- ========================= HEADER ========================= -->
+  <header class="site-header">
+    <div class="container">
+      <a href="#" class="brand">
+        <div class="brand__logo" aria-hidden="true">
+          <img src="Aset/LOGO.png" alt="Logo Dinas Arsip dan Perpustakaan Kota Semarang">
+        </div>
+        <div class="brand__text">
+          <div class="brand__title">DINAS ARSIP DAN PERPUSTAKAAN</div>
+          <div class="brand__subtitle">KOTA SEMARANG</div>
+        </div>
+      </a>
 
-    <button class="nav-toggle" aria-label="Buka menu navigasi" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+      <button class="nav-toggle" aria-label="Buka menu navigasi" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
 
-    <nav class="main-nav" aria-label="Navigasi utama">
-      <ul class="main-nav__list">
-        <li><a href="#" class="active">BERANDA</a></li>
-        <li><a href="#profil">PROFIL</a></li>
-        <li><a href="#ppid">PPID</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#kontak">KONTAK</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+      <nav class="main-nav" aria-label="Navigasi utama">
+        <ul class="main-nav__list">
+          <li><a href="#" class="active">BERANDA</a></li>
+          <li><a href="#profil">PROFIL</a></li>
+          <li><a href="#ppid">PPID</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#kontak">KONTAK</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<!-- ========================= HERO ========================= -->
-<section class="hero">
-  <div class="hero__red-block" aria-hidden="true"></div>
-  <div class="container">
-    <div class="hero__inner">
-      <p class="hero__eyebrow">SELAMAT DATANG DI WEBSITE</p>
-      <h1 class="hero__title">DINAS ARSIP DAN PERPUSTAKAAN<br>KOTA SEMARANG</h1>
+  <!-- ========================= HERO ========================= -->
+  <section class="hero">
+    <div class="hero__red-block" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero__inner">
+        <p class="hero__eyebrow">SELAMAT DATANG DI WEBSITE</p>
+        <h1 class="hero__title">DINAS ARSIP DAN PERPUSTAKAAN<br>KOTA SEMARANG</h1>
 
-      <div class="hero__card">
-        <div class="hero__card-media placeholder" aria-label="Foto gedung Arpus Kota Semarang">Foto Gedung</div>
-        <button class="hero__play" aria-label="Putar video">
-          <svg class="icon"><use href="#icon-play"/></svg>
-        </button>
-        <div class="hero__caption">
-          <div class="hero__caption-row">
-            <div>
-              <div class="hero__caption-title">PAMERAN ARSIP KOTA</div>
-              <div class="hero__caption-sub">Mulai Pekan ini di Gedung Arpus</div>
+        <div class="hero__card">
+          <div class="hero__card-media placeholder" aria-label="Foto gedung Arpus Kota Semarang">Foto Gedung</div>
+          <button class="hero__play" aria-label="Putar video">
+            <svg class="icon">
+              <use href="#icon-play" />
+            </svg>
+          </button>
+          <div class="hero__caption">
+            <div class="hero__caption-row">
+              <div>
+                <div class="hero__caption-title">PAMERAN ARSIP KOTA</div>
+                <div class="hero__caption-sub">Mulai Pekan ini di Gedung Arpus</div>
+              </div>
+              <a href="#" class="btn btn--gold-outline">Baca Selengkapnya</a>
             </div>
-            <a href="#" class="btn btn--gold-outline">Baca Selengkapnya</a>
+            <div class="hero__dots" data-dots>
+              <span class="active"></span><span></span><span></span><span></span>
+            </div>
           </div>
-          <div class="hero__dots" data-dots>
-            <span class="active"></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= ADDRESS BAR ========================= -->
+  <div class="address-bar">
+    Jl. Prof. Sudarto No. 116, Kel.Sumurboto, Kec. Banyumanik, Kota Semarang, Jawa Tengah 50269
+  </div>
+
+  <!-- ========================= MENU KAMI ========================= -->
+  <section class="menu-kami">
+    <div class="container">
+      <h2 class="section-title">Menu <span class="accent">Kami</span></h2>
+
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="menu-card__icon menu-card__icon--agenda"><svg class="icon">
+              <use href="#icon-agenda" />
+            </svg></div>
+          <h3 class="menu-card__title">AGENDA</h3>
+          <div class="menu-card__list">
+            <a href="#">ACARA DINAS</a>
+            <a href="#">ACARA PEMKOT</a>
+            <a href="#">ACARA PERPUSNAS</a>
+            <a href="#">ACARA ANRI</a>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-card__icon menu-card__icon--media"><svg class="icon">
+              <use href="#icon-media" />
+            </svg></div>
+          <h3 class="menu-card__title">MEDIA SIAR</h3>
+          <div class="menu-card__list">
+            <a href="#">SOBAT BUKU</a>
+            <a href="#">VIDEO CONVERCE</a>
+            <a href="#">E-RADIO</a>
+            <a href="#">STREAMING</a>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-card__icon menu-card__icon--galery"><svg class="icon">
+              <use href="#icon-play" />
+            </svg></div>
+          <h3 class="menu-card__title">GALERY</h3>
+          <div class="menu-card__list">
+            <a href="#">FOTO</a>
+            <a href="#">VIDEO</a>
+            <a href="#">BROSUR/POSTER</a>
+            <a href="#">ARSIP DOKUMENTER</a>
+          </div>
+        </div>
+
+        <div class="menu-card menu-card--sibaja">
+          <div class="sibaja__content">
+            <div class="sibaja__title">Sibaja</div>
+            <div class="sibaja__sub">(Senarai Istilah<br>Budaya Jawa)</div>
+          </div>
+          <div class="sibaja__search">
+            <svg class="icon">
+              <use href="#icon-search" />
+            </svg>
+            <label for="sibaja-search" class="visually-hidden">Cari istilah budaya Jawa</label>
+            <input id="sibaja-search" type="text" placeholder="">
+            <svg class="icon">
+              <use href="#icon-mic" />
+            </svg>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ========================= ADDRESS BAR ========================= -->
-<div class="address-bar">
-  Jl. Prof. Sudarto No. 116, Kel.Sumurboto, Kec. Banyumanik, Kota Semarang, Jawa Tengah 50269
-</div>
-
-<!-- ========================= MENU KAMI ========================= -->
-<section class="menu-kami">
-  <div class="container">
-    <h2 class="section-title">Menu <span class="accent">Kami</span></h2>
-
-    <div class="menu-grid">
-      <div class="menu-card">
-        <div class="menu-card__icon menu-card__icon--agenda"><svg class="icon"><use href="#icon-agenda"/></svg></div>
-        <h3 class="menu-card__title">AGENDA</h3>
-        <div class="menu-card__list">
-          <a href="#">ACARA DINAS</a>
-          <a href="#">ACARA PEMKOT</a>
-          <a href="#">ACARA PERPUSNAS</a>
-          <a href="#">ACARA ANRI</a>
+  <!-- ========================= SEARCH BAR ========================= -->
+  <section class="search-section">
+    <div class="container">
+      <form class="search-bar" role="search">
+        <div class="search-bar__input">
+          <svg class="icon">
+            <use href="#icon-search" />
+          </svg>
+          <label for="main-search" class="visually-hidden">Cari</label>
+          <input id="main-search" type="text" placeholder="Cari.....">
         </div>
+        <button type="submit" class="btn btn--red">Cari</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========================= GELIAT BERGEMA ========================= -->
+  <section class="geliat">
+    <div class="container">
+      <h2 class="geliat__title">GELIAT BERGEMA</h2>
+      <p class="geliat__sub">Gerakan Literasi Atraktif Bergerak Bersama</p>
+      <p class="geliat__sub">Gerakan Peduli Arsip Terpadu Bergerak Bersama</p>
+
+      <div class="geliat__actions">
+        <a class="geliat__action" href="#">
+          <div class="geliat__action-icon"><svg class="icon">
+              <use href="#icon-book" />
+            </svg></div>
+          <span class="geliat__action-label">CARI BUKU</span>
+        </a>
+        <a class="geliat__action" href="#">
+          <div class="geliat__action-icon"><svg class="icon">
+              <use href="#icon-archive" />
+            </svg></div>
+          <span class="geliat__action-label">CARI ARSIP</span>
+        </a>
+        <a class="geliat__action" href="#">
+          <div class="geliat__action-icon"><svg class="icon">
+              <use href="#icon-gavel" />
+            </svg></div>
+          <span class="geliat__action-label">CARI PERATURAN</span>
+        </a>
+        <a class="geliat__action" href="#">
+          <div class="geliat__action-icon"><svg class="icon">
+              <use href="#icon-heart-hand" />
+            </svg></div>
+          <span class="geliat__action-label">USULAN BUKU</span>
+        </a>
+        <a class="geliat__action" href="#">
+          <div class="geliat__action-icon"><svg class="icon">
+              <use href="#icon-layers" />
+            </svg></div>
+          <span class="geliat__action-label">DONASI BUKU</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= BUKU TERBARU + TRENDING ========================= -->
+  <section class="content-row-wrap">
+    <div class="container content-row">
+      <div class="buku-col">
+        <h3 class="subsection-title">Buku Terbaru</h3>
+        <div class="book-grid">
+          <article>
+            <div class="book-card__cover" style="background:#3f6b3a;">Pergi</div>
+            <p class="book-card__title">Pergi</p>
+          </article>
+          <article>
+            <div class="book-card__cover" style="background:#4a4f8f;">Pulang</div>
+            <p class="book-card__title">Pulang</p>
+          </article>
+          <article>
+            <div class="book-card__cover" style="background:#7a4a2a;">Tentang Kamu</div>
+            <p class="book-card__title">Tentang Kamu</p>
+          </article>
+          <article>
+            <div class="book-card__cover" style="background:#3a6f8f;">Rindu</div>
+            <p class="book-card__title">Rindu</p>
+          </article>
+          <article>
+            <div class="book-card__cover" style="background:#2f8fa8;">Hujan</div>
+            <p class="book-card__title">Hujan</p>
+          </article>
+        </div>
+        <div class="center-btn"><a href="#" class="btn btn--gold">Selengkapnya</a></div>
+
+        <h3 class="subsection-title" style="margin-top:36px;">Berita Terbaru</h3>
+        <div class="berita-grid">
+          <article>
+            <div class="berita-card__thumb placeholder">Foto Berita</div>
+            <p class="berita-card__title">Judul Berita</p>
+          </article>
+          <article>
+            <div class="berita-card__thumb placeholder">Foto Berita</div>
+            <p class="berita-card__title">Judul Berita</p>
+          </article>
+          <article>
+            <div class="berita-card__thumb placeholder">Foto Berita</div>
+            <p class="berita-card__title">Judul Berita</p>
+          </article>
+        </div>
+        <div class="center-btn"><a href="#" class="btn btn--gold">Selengkapnya</a></div>
       </div>
 
-      <div class="menu-card">
-        <div class="menu-card__icon menu-card__icon--media"><svg class="icon"><use href="#icon-media"/></svg></div>
-        <h3 class="menu-card__title">MEDIA SIAR</h3>
-        <div class="menu-card__list">
-          <a href="#">SOBAT BUKU</a>
-          <a href="#">VIDEO CONVERCE</a>
-          <a href="#">E-RADIO</a>
-          <a href="#">STREAMING</a>
+      <aside class="trending">
+        <div class="trending__header">Trending Hari Ini</div>
+        <div class="trending__item">
+          <div class="trending__thumb placeholder">Foto</div>
+          <div class="trending__label">Judul</div>
         </div>
-      </div>
+        <div class="trending__item">
+          <div class="trending__thumb placeholder">Foto</div>
+          <div class="trending__label">Judul</div>
+        </div>
+        <div class="trending__dots" data-dots>
+          <span class="active"></span><span></span><span></span><span></span>
+        </div>
+      </aside>
+    </div>
+  </section>
 
-      <div class="menu-card">
-        <div class="menu-card__icon menu-card__icon--galery"><svg class="icon"><use href="#icon-play"/></svg></div>
-        <h3 class="menu-card__title">GALERY</h3>
-        <div class="menu-card__list">
-          <a href="#">FOTO</a>
-          <a href="#">VIDEO</a>
-          <a href="#">BROSUR/POSTER</a>
-          <a href="#">ARSIP DOKUMENTER</a>
-        </div>
+  <!-- ========================= BERITA MEDIA ========================= -->
+  <section class="container">
+    <div class="media-strip">
+      <div class="media-strip__title">Berita Media</div>
+      <div class="media-strip__logos">
+        <span>detikcom</span>
+        <span>Liputan6</span>
+        <span>KOMPAS.com</span>
+        <span>TribunJateng</span>
+        <span>SuaraMerdeka.com</span>
       </div>
+    </div>
+  </section>
 
-      <div class="menu-card menu-card--sibaja">
-        <div class="sibaja__content">
-          <div class="sibaja__title">Sibaja</div>
-          <div class="sibaja__sub">(Senarai Istilah<br>Budaya Jawa)</div>
+  <!-- ========================= LAYANAN PERPUSNAS ========================= -->
+  <section class="layanan">
+    <div class="container">
+      <h2 class="layanan__title">LAYANAN PERPUSTAKAAN NASIONAL REPUBLIK INDONESIA</h2>
+      <div class="layanan__grid">
+        <a class="layanan__pill" href="#">
+          <svg class="icon">
+            <use href="#icon-pointer" />
+          </svg>
+          <span>
+            <span class="layanan__pill-title">IPUSNAS :</span><br>
+            <span class="layanan__pill-sub">PERPUSTAKAAN DIGITAL BERGERAK</span>
+          </span>
+        </a>
+        <a class="layanan__pill" href="#">
+          <svg class="icon">
+            <use href="#icon-pointer" />
+          </svg>
+          <span>
+            <span class="layanan__pill-title">OPAC :</span><br>
+            <span class="layanan__pill-sub">ONLINE PUBLIC ACCES CATALOG</span>
+          </span>
+        </a>
+        <a class="layanan__pill" href="#">
+          <svg class="icon">
+            <use href="#icon-pointer" />
+          </svg>
+          <span>
+            <span class="layanan__pill-title">E-RES :</span><br>
+            <span class="layanan__pill-sub">KOLEKSI DIGITAL BERLANGGAN</span>
+          </span>
+        </a>
+        <a class="layanan__pill" href="#">
+          <svg class="icon">
+            <use href="#icon-pointer" />
+          </svg>
+          <span>
+            <span class="layanan__pill-title">IOS :</span><br>
+            <span class="layanan__pill-sub">INDONESIA ONESEARCH BY PERPUSNAS</span>
+          </span>
+        </a>
+        <a class="layanan__pill" href="#">
+          <svg class="icon">
+            <use href="#icon-pointer" />
+          </svg>
+          <span>
+            <span class="layanan__pill-title">ISBN :</span><br>
+            <span class="layanan__pill-sub">INTERNATIONAL STANDART BOOK NUMBER</span>
+          </span>
+        </a>
+        <a class="layanan__pill" href="#">
+          <svg class="icon">
+            <use href="#icon-pointer" />
+          </svg>
+          <span>
+            <span class="layanan__pill-title">K-OL :</span><br>
+            <span class="layanan__pill-sub">KEANGGOTAAN ONLINE PERPUSNAS</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= APLIKASI KAMI ========================= -->
+  <section class="aplikasi">
+    <div class="container">
+      <h2 class="aplikasi__title">APLIKASI KAMI</h2>
+      <div class="aplikasi__logos">
+        <div class="aplikasi__logo">
+          <div class="aplikasi__logo-icon"><svg class="icon">
+              <use href="#icon-shield" />
+            </svg></div>
+          <span class="aplikasi__logo-name">SELARAS</span>
         </div>
-        <div class="sibaja__search">
-          <svg class="icon"><use href="#icon-search"/></svg>
-          <label for="sibaja-search" class="visually-hidden">Cari istilah budaya Jawa</label>
-          <input id="sibaja-search" type="text" placeholder="">
-          <svg class="icon"><use href="#icon-mic"/></svg>
+        <div class="aplikasi__logo">
+          <div class="aplikasi__logo-icon"><svg class="icon">
+              <use href="#icon-bookmark" />
+            </svg></div>
+          <span class="aplikasi__logo-name">Si Booky</span>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ========================= SEARCH BAR ========================= -->
-<section class="search-section">
-  <div class="container">
-    <form class="search-bar" role="search">
-      <div class="search-bar__input">
-        <svg class="icon"><use href="#icon-search"/></svg>
-        <label for="main-search" class="visually-hidden">Cari</label>
-        <input id="main-search" type="text" placeholder="Cari.....">
-      </div>
-      <button type="submit" class="btn btn--red">Cari</button>
-    </form>
-  </div>
-</section>
-
-<!-- ========================= GELIAT BERGEMA ========================= -->
-<section class="geliat">
-  <div class="container">
-    <h2 class="geliat__title">GELIAT BERGEMA</h2>
-    <p class="geliat__sub">Gerakan Literasi Atraktif Bergerak Bersama</p>
-    <p class="geliat__sub">Gerakan Peduli Arsip Terpadu Bergerak Bersama</p>
-
-    <div class="geliat__actions">
-      <a class="geliat__action" href="#">
-        <div class="geliat__action-icon"><svg class="icon"><use href="#icon-book"/></svg></div>
-        <span class="geliat__action-label">CARI BUKU</span>
-      </a>
-      <a class="geliat__action" href="#">
-        <div class="geliat__action-icon"><svg class="icon"><use href="#icon-archive"/></svg></div>
-        <span class="geliat__action-label">CARI ARSIP</span>
-      </a>
-      <a class="geliat__action" href="#">
-        <div class="geliat__action-icon"><svg class="icon"><use href="#icon-gavel"/></svg></div>
-        <span class="geliat__action-label">CARI PERATURAN</span>
-      </a>
-      <a class="geliat__action" href="#">
-        <div class="geliat__action-icon"><svg class="icon"><use href="#icon-heart-hand"/></svg></div>
-        <span class="geliat__action-label">USULAN BUKU</span>
-      </a>
-      <a class="geliat__action" href="#">
-        <div class="geliat__action-icon"><svg class="icon"><use href="#icon-layers"/></svg></div>
-        <span class="geliat__action-label">DONASI BUKU</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ========================= BUKU TERBARU + TRENDING ========================= -->
-<section class="content-row-wrap">
-  <div class="container content-row">
-    <div class="buku-col">
-      <h3 class="subsection-title">Buku Terbaru</h3>
-      <div class="book-grid">
-        <article>
-          <div class="book-card__cover" style="background:#3f6b3a;">Pergi</div>
-          <p class="book-card__title">Pergi</p>
-        </article>
-        <article>
-          <div class="book-card__cover" style="background:#4a4f8f;">Pulang</div>
-          <p class="book-card__title">Pulang</p>
-        </article>
-        <article>
-          <div class="book-card__cover" style="background:#7a4a2a;">Tentang Kamu</div>
-          <p class="book-card__title">Tentang Kamu</p>
-        </article>
-        <article>
-          <div class="book-card__cover" style="background:#3a6f8f;">Rindu</div>
-          <p class="book-card__title">Rindu</p>
-        </article>
-        <article>
-          <div class="book-card__cover" style="background:#2f8fa8;">Hujan</div>
-          <p class="book-card__title">Hujan</p>
-        </article>
-      </div>
-      <div class="center-btn"><a href="#" class="btn btn--gold">Selengkapnya</a></div>
-
-      <h3 class="subsection-title" style="margin-top:36px;">Berita Terbaru</h3>
-      <div class="berita-grid">
-        <article>
-          <div class="berita-card__thumb placeholder">Foto Berita</div>
-          <p class="berita-card__title">Judul Berita</p>
-        </article>
-        <article>
-          <div class="berita-card__thumb placeholder">Foto Berita</div>
-          <p class="berita-card__title">Judul Berita</p>
-        </article>
-        <article>
-          <div class="berita-card__thumb placeholder">Foto Berita</div>
-          <p class="berita-card__title">Judul Berita</p>
-        </article>
-      </div>
-      <div class="center-btn"><a href="#" class="btn btn--gold">Selengkapnya</a></div>
-    </div>
-
-    <aside class="trending">
-      <div class="trending__header">Trending Hari Ini</div>
-      <div class="trending__item">
-        <div class="trending__thumb placeholder">Foto</div>
-        <div class="trending__label">Judul</div>
-      </div>
-      <div class="trending__item">
-        <div class="trending__thumb placeholder">Foto</div>
-        <div class="trending__label">Judul</div>
-      </div>
-      <div class="trending__dots" data-dots>
-        <span class="active"></span><span></span><span></span><span></span>
-      </div>
-    </aside>
-  </div>
-</section>
-
-<!-- ========================= BERITA MEDIA ========================= -->
-<section class="container">
-  <div class="media-strip">
-    <div class="media-strip__title">Berita Media</div>
-    <div class="media-strip__logos">
-      <span>detikcom</span>
-      <span>Liputan6</span>
-      <span>KOMPAS.com</span>
-      <span>TribunJateng</span>
-      <span>SuaraMerdeka.com</span>
-    </div>
-  </div>
-</section>
-
-<!-- ========================= LAYANAN PERPUSNAS ========================= -->
-<section class="layanan">
-  <div class="container">
-    <h2 class="layanan__title">LAYANAN PERPUSTAKAAN NASIONAL REPUBLIK INDONESIA</h2>
-    <div class="layanan__grid">
-      <a class="layanan__pill" href="#">
-        <svg class="icon"><use href="#icon-pointer"/></svg>
-        <span>
-          <span class="layanan__pill-title">IPUSNAS :</span><br>
-          <span class="layanan__pill-sub">PERPUSTAKAAN DIGITAL BERGERAK</span>
-        </span>
-      </a>
-      <a class="layanan__pill" href="#">
-        <svg class="icon"><use href="#icon-pointer"/></svg>
-        <span>
-          <span class="layanan__pill-title">OPAC :</span><br>
-          <span class="layanan__pill-sub">ONLINE PUBLIC ACCES CATALOG</span>
-        </span>
-      </a>
-      <a class="layanan__pill" href="#">
-        <svg class="icon"><use href="#icon-pointer"/></svg>
-        <span>
-          <span class="layanan__pill-title">E-RES :</span><br>
-          <span class="layanan__pill-sub">KOLEKSI DIGITAL BERLANGGAN</span>
-        </span>
-      </a>
-      <a class="layanan__pill" href="#">
-        <svg class="icon"><use href="#icon-pointer"/></svg>
-        <span>
-          <span class="layanan__pill-title">IOS :</span><br>
-          <span class="layanan__pill-sub">INDONESIA ONESEARCH BY PERPUSNAS</span>
-        </span>
-      </a>
-      <a class="layanan__pill" href="#">
-        <svg class="icon"><use href="#icon-pointer"/></svg>
-        <span>
-          <span class="layanan__pill-title">ISBN :</span><br>
-          <span class="layanan__pill-sub">INTERNATIONAL STANDART BOOK NUMBER</span>
-        </span>
-      </a>
-      <a class="layanan__pill" href="#">
-        <svg class="icon"><use href="#icon-pointer"/></svg>
-        <span>
-          <span class="layanan__pill-title">K-OL :</span><br>
-          <span class="layanan__pill-sub">KEANGGOTAAN ONLINE PERPUSNAS</span>
-        </span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ========================= APLIKASI KAMI ========================= -->
-<section class="aplikasi">
-  <div class="container">
-    <h2 class="aplikasi__title">APLIKASI KAMI</h2>
-    <div class="aplikasi__logos">
-      <div class="aplikasi__logo">
-        <div class="aplikasi__logo-icon"><svg class="icon"><use href="#icon-shield"/></svg></div>
-        <span class="aplikasi__logo-name">SELARAS</span>
-      </div>
-      <div class="aplikasi__logo">
-        <div class="aplikasi__logo-icon"><svg class="icon"><use href="#icon-bookmark"/></svg></div>
-        <span class="aplikasi__logo-name">Si Booky</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========================= DATA LAINNYA / FAQ ========================= -->
-<section class="info-section" id="faq">
-  <div class="container info-grid">
-    <div class="info-col">
-      <h3 class="info-col__title">Data Lainnya</h3>
-      <div class="accordion">
-        <div class="accordion-item">
-          <button class="accordion-item__btn" aria-expanded="false">
-            Keanggotaan Perpustakaan <svg class="icon accordion-chevron"><use href="#icon-chevron-down"/></svg>
-          </button>
-          <div class="accordion-item__panel">Informasi seputar pendaftaran dan keanggotaan perpustakaan.</div>
+  <!-- ========================= DATA LAINNYA / FAQ ========================= -->
+  <section class="info-section" id="faq">
+    <div class="container info-grid">
+      <div class="info-col">
+        <h3 class="info-col__title">Data Lainnya</h3>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-item__btn" aria-expanded="false">
+              Keanggotaan Perpustakaan <svg class="icon accordion-chevron">
+                <use href="#icon-chevron-down" />
+              </svg>
+            </button>
+            <div class="accordion-item__panel">Informasi seputar pendaftaran dan keanggotaan perpustakaan.</div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-item__btn" aria-expanded="false">
+              Pustakawan <svg class="icon accordion-chevron">
+                <use href="#icon-chevron-down" />
+              </svg>
+            </button>
+            <div class="accordion-item__panel">Daftar dan profil pustakawan Dinas Arsip dan Perpustakaan.</div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-item__btn" aria-expanded="false">
+              Statistik <svg class="icon accordion-chevron">
+                <use href="#icon-chevron-down" />
+              </svg>
+            </button>
+            <div class="accordion-item__panel">Statistik kunjungan dan koleksi perpustakaan.</div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-item__btn" aria-expanded="false">
+              Survey Layanan <svg class="icon accordion-chevron">
+                <use href="#icon-chevron-down" />
+              </svg>
+            </button>
+            <div class="accordion-item__panel">Isi survey kepuasan layanan kami.</div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-item__btn" aria-expanded="false">
+              Sapa Mbak Ita <svg class="icon accordion-chevron">
+                <use href="#icon-chevron-down" />
+              </svg>
+            </button>
+            <div class="accordion-item__panel">Sampaikan aspirasi Anda melalui kanal Sapa Mbak Ita.</div>
+          </div>
         </div>
-        <div class="accordion-item">
-          <button class="accordion-item__btn" aria-expanded="false">
-            Pustakawan <svg class="icon accordion-chevron"><use href="#icon-chevron-down"/></svg>
-          </button>
-          <div class="accordion-item__panel">Daftar dan profil pustakawan Dinas Arsip dan Perpustakaan.</div>
+      </div>
+
+      <div class="info-col">
+        <h3 class="info-col__title">Pertanyaan Umum</h3>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-item__btn" aria-expanded="false">
+              Cara daftar anggota perpustakaan? <svg class="icon accordion-chevron">
+                <use href="#icon-chevron-down" />
+              </svg>
+            </button>
+            <div class="accordion-item__panel">Kunjungi loket keanggotaan dengan membawa KTP/KIA.</div>
+          </div>
+          <div class="accordion-item open">
+            <button class="accordion-item__btn" aria-expanded="true">
+              Cara mengajukan permohonan arsip? <svg class="icon accordion-chevron">
+                <use href="#icon-chevron-down" />
+              </svg>
+            </button>
+            <div class="accordion-item__panel">Ajukan online lewat menu Layanan Arsip, isi formulir, dan lacak status
+              langsung.</div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-item__btn" aria-expanded="false">
+              Apa syarat booking ruang baca? <svg class="icon accordion-chevron">
+                <use href="#icon-chevron-down" />
+              </svg>
+            </button>
+            <div class="accordion-item__panel">Isi formulir pemesanan ruang melalui menu Pesan Ruang.</div>
+          </div>
         </div>
-        <div class="accordion-item">
-          <button class="accordion-item__btn" aria-expanded="false">
-            Statistik <svg class="icon accordion-chevron"><use href="#icon-chevron-down"/></svg>
-          </button>
-          <div class="accordion-item__panel">Statistik kunjungan dan koleksi perpustakaan.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= MEDIA SOSIAL ========================= -->
+  <section class="social-section">
+    <div class="container">
+      <h3 class="social-section__title">Media <span style="text-decoration:underline;">Sosial</span></h3>
+      <div class="social-icons">
+        <a href="#" aria-label="Instagram"><svg class="icon">
+            <use href="#icon-instagram" />
+          </svg></a>
+        <a href="#" aria-label="Facebook"><svg class="icon">
+            <use href="#icon-facebook" />
+          </svg></a>
+        <a href="#" aria-label="X (Twitter)"><svg class="icon">
+            <use href="#icon-x" />
+          </svg></a>
+        <a href="#" aria-label="YouTube"><svg class="icon">
+            <use href="#icon-youtube" />
+          </svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= FOOTER ========================= -->
+  <footer class="site-footer" id="kontak">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer">
+          <div class="footer-brand">
+            <div class="footer-brand__logo" aria-hidden="true">
+              <img src="Aset/LOGO.png" alt="Logo Dinas Arsip dan Perpustakaan Kota Semarang">
+            </div>
+            <div class="footer-brand__title">DINAS ARSIP DAN PERPUSTAKAAN<br>KOTA SEMARANG</div>
+          </div>
+          <p>Badan Arsip dan Perpustakaan berkomitmen untuk mewujudkan layanan kearsipan yang atraktif dalam mendukung
+            Semarang semakin hebat.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><svg class="icon">
+                <use href="#icon-facebook" />
+              </svg></a>
+            <a href="#" aria-label="Instagram"><svg class="icon">
+                <use href="#icon-instagram" />
+              </svg></a>
+            <a href="#" aria-label="Telegram"><svg class="icon">
+                <use href="#icon-telegram" />
+              </svg></a>
+            <a href="#" aria-label="YouTube"><svg class="icon">
+                <use href="#icon-youtube" />
+              </svg></a>
+          </div>
         </div>
-        <div class="accordion-item">
-          <button class="accordion-item__btn" aria-expanded="false">
-            Survey Layanan <svg class="icon accordion-chevron"><use href="#icon-chevron-down"/></svg>
-          </button>
-          <div class="accordion-item__panel">Isi survey kepuasan layanan kami.</div>
+
+        <div class="footer-col">
+          <h4>Tautan Cepat</h4>
+          <ul>
+            <li><a href="#">Semarang Kota <svg class="icon">
+                  <use href="#icon-external" />
+                </svg></a></li>
+            <li><a href="#">SIPPN <svg class="icon">
+                  <use href="#icon-external" />
+                </svg></a></li>
+            <li><a href="#">Prov. Jateng <svg class="icon">
+                  <use href="#icon-external" />
+                </svg></a></li>
+            <li><a href="#">Perpusnas <svg class="icon">
+                  <use href="#icon-external" />
+                </svg></a></li>
+            <li><a href="#">ANRI <svg class="icon">
+                  <use href="#icon-external" />
+                </svg></a></li>
+            <li><a href="#">Arpus Jateng <svg class="icon">
+                  <use href="#icon-external" />
+                </svg></a></li>
+          </ul>
         </div>
-        <div class="accordion-item">
-          <button class="accordion-item__btn" aria-expanded="false">
-            Sapa Mbak Ita <svg class="icon accordion-chevron"><use href="#icon-chevron-down"/></svg>
-          </button>
-          <div class="accordion-item__panel">Sampaikan aspirasi Anda melalui kanal Sapa Mbak Ita.</div>
+
+        <div class="footer-col">
+          <h4>Layanan</h4>
+          <ul>
+            <li><a href="#">Form Permohonan Informasi <svg class="icon">
+                  <use href="#icon-external" />
+                </svg></a></li>
+            <li><a href="#">Pengaduan Layanan Publik <svg class="icon">
+                  <use href="#icon-external" />
+                </svg></a></li>
+            <li><a href="#">Pesan Ruang <svg class="icon">
+                  <use href="#icon-external" />
+                </svg></a></li>
+            <li><a href="#">Survey Layanan <svg class="icon">
+                  <use href="#icon-external" />
+                </svg></a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kontak</h4>
+          <ul>
+            <li><a href="#"><svg class="icon">
+                  <use href="#icon-location" />
+                </svg> Jl. Prof. Sudarto No. 116, Kota Semarang, Jawa Tengah 50269</a></li>
+            <li><a href="tel:0247466215"><svg class="icon">
+                  <use href="#icon-phone" />
+                </svg> 024 7466215</a></li>
+            <li><a href="mailto:dinas_arpus@semarangkota.go.id"><svg class="icon">
+                  <use href="#icon-envelope" />
+                </svg> dinas_arpus@semarangkota.go.id</a></li>
+          </ul>
         </div>
       </div>
     </div>
 
-    <div class="info-col">
-      <h3 class="info-col__title">Pertanyaan Umum</h3>
-      <div class="accordion">
-        <div class="accordion-item">
-          <button class="accordion-item__btn" aria-expanded="false">
-            Cara daftar anggota perpustakaan? <svg class="icon accordion-chevron"><use href="#icon-chevron-down"/></svg>
-          </button>
-          <div class="accordion-item__panel">Kunjungi loket keanggotaan dengan membawa KTP/KIA.</div>
-        </div>
-        <div class="accordion-item open">
-          <button class="accordion-item__btn" aria-expanded="true">
-            Cara mengajukan permohonan arsip? <svg class="icon accordion-chevron"><use href="#icon-chevron-down"/></svg>
-          </button>
-          <div class="accordion-item__panel">Ajukan online lewat menu Layanan Arsip, isi formulir, dan lacak status langsung.</div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-item__btn" aria-expanded="false">
-            Apa syarat booking ruang baca? <svg class="icon accordion-chevron"><use href="#icon-chevron-down"/></svg>
-          </button>
-          <div class="accordion-item__panel">Isi formulir pemesanan ruang melalui menu Pesan Ruang.</div>
-        </div>
-      </div>
+    <div class="footer-bottom">
+      &copy; 2026 Badan Arsip dan Perpustakaan Kota Semarang. Seluruh hak cipta dilindungi Undang-Undang.
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- ========================= MEDIA SOSIAL ========================= -->
-<section class="social-section">
-  <div class="container">
-    <h3 class="social-section__title">Media <span style="text-decoration:underline;">Sosial</span></h3>
-    <div class="social-icons">
-      <a href="#" aria-label="Instagram"><svg class="icon"><use href="#icon-instagram"/></svg></a>
-      <a href="#" aria-label="Facebook"><svg class="icon"><use href="#icon-facebook"/></svg></a>
-      <a href="#" aria-label="X (Twitter)"><svg class="icon"><use href="#icon-x"/></svg></a>
-      <a href="#" aria-label="YouTube"><svg class="icon"><use href="#icon-youtube"/></svg></a>
-    </div>
-  </div>
-</section>
-
-<!-- ========================= FOOTER ========================= -->
-<footer class="site-footer" id="kontak">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col footer">
-        <div class="footer-brand">
-          <div class="footer-brand__logo" aria-hidden="true"></div>
-          <div class="footer-brand__title">DINAS ARSIP DAN PERPUSTAKAAN<br>KOTA SEMARANG</div>
-        </div>
-        <p>Badan Arsip dan Perpustakaan berkomitmen untuk mewujudkan layanan kearsipan yang atraktif dalam mendukung Semarang semakin hebat.</p>
-        <div class="footer-social">
-          <a href="#" aria-label="Facebook"><svg class="icon"><use href="#icon-facebook"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg class="icon"><use href="#icon-instagram"/></svg></a>
-          <a href="#" aria-label="Telegram"><svg class="icon"><use href="#icon-telegram"/></svg></a>
-          <a href="#" aria-label="YouTube"><svg class="icon"><use href="#icon-youtube"/></svg></a>
-        </div>
-      </div>
-
-      <div class="footer-col">
-        <h4>Tautan Cepat</h4>
-        <ul>
-          <li><a href="#">Semarang Kota <svg class="icon"><use href="#icon-external"/></svg></a></li>
-          <li><a href="#">SIPPN <svg class="icon"><use href="#icon-external"/></svg></a></li>
-          <li><a href="#">Prov. Jateng <svg class="icon"><use href="#icon-external"/></svg></a></li>
-          <li><a href="#">Perpusnas <svg class="icon"><use href="#icon-external"/></svg></a></li>
-          <li><a href="#">ANRI <svg class="icon"><use href="#icon-external"/></svg></a></li>
-          <li><a href="#">Arpus Jateng <svg class="icon"><use href="#icon-external"/></svg></a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Layanan</h4>
-        <ul>
-          <li><a href="#">Form Permohonan Informasi <svg class="icon"><use href="#icon-external"/></svg></a></li>
-          <li><a href="#">Pengaduan Layanan Publik <svg class="icon"><use href="#icon-external"/></svg></a></li>
-          <li><a href="#">Pesan Ruang <svg class="icon"><use href="#icon-external"/></svg></a></li>
-          <li><a href="#">Survey Layanan <svg class="icon"><use href="#icon-external"/></svg></a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Kontak</h4>
-        <ul>
-          <li><a href="#"><svg class="icon"><use href="#icon-location"/></svg> Jl. Prof. Sudarto No. 116, Kota Semarang, Jawa Tengah 50269</a></li>
-          <li><a href="tel:0247466215"><svg class="icon"><use href="#icon-phone"/></svg> 024 7466215</a></li>
-          <li><a href="mailto:dinas_arpus@semarangkota.go.id"><svg class="icon"><use href="#icon-envelope"/></svg> dinas_arpus@semarangkota.go.id</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    &copy; 2026 Badan Arsip dan Perpustakaan Kota Semarang. Seluruh hak cipta dilindungi Undang-Undang.
-  </div>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
+  
 </body>
+
 </html>
