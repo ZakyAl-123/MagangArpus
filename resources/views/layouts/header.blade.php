@@ -9,7 +9,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Open+Sans:wght@400;600;700&display=swap"
     rel="stylesheet">
-  @vite(['resources/css/app.css', 'resources/js/app.js'])
+  @vite(['resources/css/app.css', 'resources/css/tupoksi.css' ,'resources/css/visi.css' ,'resources/css/faq.css','resources/js/app.js'])
 </head>
 
 <body>
@@ -92,11 +92,10 @@
     <li class="dropdown">
       <a href="#" class="dropdown-toggle">PROFIL <span class="arrow">&#9662;</span></a>
       <ul class="dropdown-menu">
-        <li><a href="#">Visi Misi Kota</a></li>
-        <li><a href="#">Visi Misi Arpus</a></li>
-        <li><a href="#">Tupoksi Dinas Arsip dan Perpustakaan</a></li>
+        <li><a href="{{ route('visikota') }}">Visi Misi Kota</a></li>
+        <li><a href="{{ route('visiarpus') }}">Visi Misi Arpus</a></li>
+        <li><a href="{{ route('tupoksi') }}">Tupoksi Dinas Arsip dan Perpustakaan</a></li>
         <li><a href="#">Struktur Organisasi</a></li>
-        <li><a href="#">SDM</a></li>
         <li><a href="#">Sejarah</a></li>
       </ul>
     </li>
@@ -104,8 +103,8 @@
     <li class="dropdown">
       <a href="#" class="dropdown-toggle">FAQ <span class="arrow">&#9662;</span></a>
       <ul class="dropdown-menu">
-        <li><a href="#">Arsip</a></li>
-        <li><a href="#">Perpustakaan</a></li>
+        <li><a href="{{ route('FAQarsip') }}">Arsip</a></li>
+        <li><a href="{{ route('FAQperpus') }}">Perpustakaan</a></li>
       </ul>
     </li>
     <li><a href="#kontak">KONTAK</a></li>

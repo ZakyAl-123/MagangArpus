@@ -603,16 +603,15 @@
         </div>
 
         <div class="accordion-item-mod">
-          <button class="accordion-btn-mod" aria-expanded="true">
-            <span class="acc-num">02</span>
-            <span class="acc-text">Cara mengajukan permohonan arsip?</span>
-            <svg class="icon acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </button>
-          <!-- Tambahkan class 'open' secara default jika ingin panel ini terbuka dari awal -->
-          <div class="accordion-panel-mod open">
-            <p>Ajukan online lewat menu Layanan Arsip, isi formulir, dan lacak status langsung.</p>
-          </div>
-        </div>
+  <button class="accordion-btn-mod" aria-expanded="false">
+    <span class="acc-num">02</span>
+    <span class="acc-text">Cara mengajukan permohonan arsip?</span>
+    <svg class="icon acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+  </button>
+  <div class="accordion-panel-mod">
+    <p>Ajukan online lewat menu Layanan Arsip, isi formulir, dan lacak status langsung.</p>
+  </div>
+</div>
 
         <div class="accordion-item-mod">
           <button class="accordion-btn-mod" aria-expanded="false">

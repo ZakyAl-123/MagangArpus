@@ -108,4 +108,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
   });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.accordion-btn-mod').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.accordion-item-mod');
+            const panel = btn.nextElementSibling;
+            const wasOpen = panel.classList.contains('open');
+
+            // Tutup accordion lain dalam grup yang sama agar rapi
+            item.parentElement.querySelectorAll('.accordion-panel-mod.open').forEach(openPanel => {
+                if (openPanel !== panel) {
+                    openPanel.classList.remove('open');
+                    openPanel.previousElementSibling.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // Buka/Tutup panel yang diklik
+            panel.classList.toggle('open', !wasOpen);
+            btn.setAttribute('aria-expanded', String(!wasOpen));
+        });
+      });
+    });
 });

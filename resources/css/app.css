@@ -1213,110 +1213,119 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ==========================================================================
    DATA LAINNYA / FAQ
    ========================================================================== */
-/* Container Utama */
+  /* Kontainer Utama */
 .info-section-modern {
-  background-color: #ffffff; /* Latar belakang putih bersih */
+  background-color: #ffffff;
   padding: 60px 0;
 }
 
 .info-grid-modern {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Judul Kolom */
+/* Judul Kolom Data & Pertanyaan */
 .info-col__title {
-  color: #7b1818; /* Warna biru gelap agar senada dengan kartu */
+  color: var(--maroon, #000000); /* Merah gelap */
   font-size: 1.4rem;
   font-weight: 800;
   margin-bottom: 24px;
+  border-bottom: 2px solid rgba(122, 20, 20, 0.1);
+  padding-bottom: 12px;
 }
 
-/* Kotak Item Accordion (Gaya Kartu Biru) */
+/* Kotak Utama Accordion (Efek Gradien & Bayangan Lembut) */
 .accordion-item-mod {
-  background-color: #7b1818; /* Merah gelap seperti gambar referensi */
+  background: linear-gradient(145deg, #8b1c1c, #6b1414); /* Gradien marun elegan */
   border-radius: 12px;
   margin-bottom: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(123, 24, 24, 0.15);
-  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 15px rgba(107, 20, 20, 0.12); /* Bayangan lebih halus */
+  border: 1px solid rgba(255, 255, 255, 0.08); /* Garis tepi tipis agar tidak flat */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Efek sedikit terangkat saat kursor mendekat */
 .accordion-item-mod:hover {
-  background-color: #a61616; /* Sedikit lebih terang saat kursor diarahkan */
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(107, 20, 20, 0.25);
 }
 
-/* Tombol Accordion */
+/* Tombol Klik Accordion */
 .accordion-btn-mod {
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 16px 24px;
+  padding: 18px 20px;
   background: transparent;
   border: none;
   color: #ffffff;
   cursor: pointer;
   text-align: left;
+  transition: background 0.3s ease;
 }
 
-/* Kotak Nomor Urut */
+/* Warna tombol sedikit menggelap saat panel terbuka */
+.accordion-btn-mod[aria-expanded="true"] {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+/* Kotak Nomor (Gaya Semi-Transparan / Glassmorphism) */
 .acc-num {
-  background-color: rgba(255, 255, 255, 0.15); /* Efek transparan untuk kotak nomor */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
   color: #ffffff;
   font-weight: 700;
   font-size: 0.95rem;
   padding: 6px 12px;
-  border-radius: 6px;
+  border-radius: 8px;
   margin-right: 16px;
+  box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.2); /* Detail pantulan cahaya */
 }
 
-/* Teks Judul Pertanyaan */
+/* Teks Judul Accordion */
 .acc-text {
-  font-weight: 700;
-  font-size: 1rem;
+  font-weight: 600;
+  font-size: 1.05rem;
   flex-grow: 1;
   letter-spacing: 0.3px;
 }
 
-/* Ikon Chevron (Panah) */
+/* Ikon Panah Kanan */
 .acc-chevron {
   width: 20px;
   height: 20px;
   transition: transform 0.3s ease;
+  opacity: 0.8;
 }
 
-/* Panel Konten (Teks Jawaban) */
+/* Animasi Putar Panah */
+.accordion-btn-mod[aria-expanded="true"] .acc-chevron {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
+/* Area Konten/Jawaban Teks */
 .accordion-panel-mod {
   max-height: 0;
   overflow: hidden;
-  padding: 0 24px 0 80px; /* Padding kiri disejajarkan dengan teks judul (melewati kotak nomor) */
-  color: #d1e3f8; /* Biru sangat muda agar kontras dengan latar gelap */
-  font-size: 0.9rem;
+  padding: 0 20px 0 75px; /* Teks sejajar dengan judul, melewati kotak nomor */
+  color: #f1f3f5; /* Putih keabu-abuan agar tidak menyilaukan */
+  font-size: 0.95rem;
   line-height: 1.6;
+  background: rgba(0, 0, 0, 0.05); /* Membedakan area teks dengan area judul */
   transition: max-height 0.3s ease, padding 0.3s ease;
 }
 
-/* Kondisi Terbuka (Menggunakan Class .open) */
+/* Kondisi Terbuka */
 .accordion-panel-mod.open {
-  max-height: 500px; /* Nilai besar agar animasi mulus */
-  padding-bottom: 20px; /* Tambahkan ruang di bawah teks saat terbuka */
-}
-
-.accordion-btn-mod[aria-expanded="true"] .acc-chevron {
-  transform: rotate(180deg);
-}
-
-/* Responsif untuk Layar Tablet / HP */
-@media (max-width: 768px) {
-  .info-grid-modern {
-    grid-template-columns: 1fr;
-    gap: 30px;
+  max-height: 500px;
+  padding-top: 10px;
+  padding-bottom: 20px;
   }
-}
-
 /* ==========================================================================
    MEDIA SOSIAL
    ========================================================================== */

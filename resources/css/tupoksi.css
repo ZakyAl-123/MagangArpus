@@ -1,0 +1,203 @@
+/* ==========================================================================
+   HALAMAN TUPOKSI — STYLING
+   ========================================================================== */
+
+:root {
+    --tp-maroon: #7a1414;
+    --tp-maroon-light: #fdf2f2;
+    --tp-dark: #1a1a1a;
+    --tp-gray: #555555;
+    --tp-border: #e4e4e7;
+    --tp-bg: #f8fafc;
+}
+
+.tupoksi-page {
+    background-color: var(--tp-bg);
+    padding: 60px 0 80px 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Header Halaman */
+.tupoksi-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+.tupoksi-subtitle {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--tp-maroon);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    background: var(--tp-maroon-light);
+    padding: 6px 16px;
+    border-radius: 30px;
+}
+
+.tupoksi-title {
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: var(--tp-dark);
+    margin-bottom: 16px;
+}
+
+.tupoksi-accent {
+    color: var(--tp-maroon);
+}
+
+.tupoksi-desc {
+    font-size: 1.05rem;
+    color: var(--tp-gray);
+    line-height: 1.6;
+}
+
+/* Grid Card Fungsi (2 Kolom Modern) */
+.tupoksi-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.tupoksi-card {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid var(--tp-border);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.tupoksi-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(122, 20, 20, 0.08);
+    border-color: rgba(122, 20, 20, 0.2);
+}
+
+.card-num {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--tp-maroon);
+    background: var(--tp-maroon-light);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--tp-dark);
+    text-align: justify;
+}
+
+/* Bagian Struktur / Bidang */
+.struktur-section {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid var(--tp-border);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.struktur-heading {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--tp-dark);
+    margin-bottom: 24px;
+    text-align: center;
+    border-bottom: 2px solid var(--tp-maroon-light);
+    padding-bottom: 15px;
+}
+
+.struktur-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.struktur-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    background: #fafafa;
+    border-radius: 8px;
+    border: 1px solid #f0f0f0;
+    transition: background 0.2s ease;
+}
+
+.struktur-item:hover {
+    background: var(--tp-maroon-light);
+    border-color: rgba(122, 20, 20, 0.15);
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--tp-maroon);
+    border-radius: 50%;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.nama-bidang {
+    flex-grow: 1;
+    font-weight: 600;
+    color: var(--tp-dark);
+    font-size: 0.95rem;
+}
+
+.detail-btn {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--tp-maroon);
+    background: #ffffff;
+    padding: 6px 14px;
+    border-radius: 6px;
+    border: 1px solid var(--tp-maroon);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.detail-btn:hover {
+    background: var(--tp-maroon);
+    color: #ffffff;
+}
+
+/* Responsif untuk Layar HP / Tablet */
+@media (max-width: 768px) {
+    .tupoksi-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tupoksi-title {
+        font-size: 1.8rem;
+    }
+
+    .struktur-section {
+        padding: 20px;
+    }
+
+    .struktur-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .detail-btn {
+        align-self: flex-end;
+    }
+}
