@@ -1,32 +1,56 @@
 @include('layouts.header')
-  <!-- ========================= HERO ========================= -->
-  <section class="hero" style="background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('{{ asset('asset/bakgron.png') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-    <div class="hero__red-block" aria-hidden="true"></div>
-    <div class="container">
-      <div class="hero__inner">
-        <p class="hero__eyebrow">SELAMAT DATANG DI WEBSITE</p>
-        <h1 class="hero__title">DINAS ARSIP DAN PERPUSTAKAAN<br>KOTA SEMARANG</h1>
+<!-- ========================= HERO SECTION (LATAR BELAKANG MARUN) ========================= -->
+<section class="hero-maroon" style="background-image: linear-gradient(rgba(122, 20, 20, 0.92), rgba(90, 15, 15, 0.95)), url('{{ asset('asset/bakgron.png') }}');">
+    <div class="container hero-container">
+        
+        <div class="hero-content">
+            <h1 class="hero-main-title-light">
+                Selamat Datang di Website<br>
+                <span class="hero-accent-gold">Dinas Arsip dan Perpustakaan</span> Kota Semarang
+            </h1>
+            <p class="hero-description-light">
+                Menyediakan akses mudah terhadap layanan kearsipan daerah, koleksi bahan perpustakaan, serta transparansi informasi publik yang cepat, akurat, dan terpercaya.
+            </p>
 
-        <div class="hero__card">
-          <div class="hero__card-media placeholder" aria-label="Foto gedung Arpus Kota Semarang">
-            <img src="{{ asset('asset/Card Background Image.png') }}" alt="Foto gedung Arpus Kota Semarang">
-          </div>
-          <div class="hero__caption">
-            <div class="hero__caption-row">
-              <div>
-                <div class="hero__caption-title">PAMERAN ARSIP KOTA</div>
-                <div class="hero__caption-sub">Mulai Pekan ini di Gedung Arpus</div>
-              </div>
-              <a href="#" class="btn btn--gold-outline">Baca Selengkapnya</a>
+            <!-- Kotak Pencarian Cepat -->
+            <div class="hero-search-box">
+                <form action="#" method="GET" class="search-form-light">
+                    <input type="text" name="q" placeholder="Cari judul buku, arsip, atau layanan..." class="search-input-light">
+                    <button type="submit" class="search-btn-gold">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        Cari
+                    </button>
+                </form>
             </div>
-            <div class="hero__dots" data-dots>
-              <span class="active"></span><span></span><span></span><span></span>
+
+            <!-- Tombol Aksi -->
+            <div class="hero-actions">
+                <a href="{{ route('tupoksi') }}" class="btn-gold">
+                    Tentang Kami
+                </a>
+                <a href="{{ route('FAQarsip') }}" class="btn-outline-light">
+                    Pusat Bantuan
+                </a>
             </div>
-          </div>
         </div>
-      </div>
+
+        <!-- Sisi Kanan: Kartu Estetik Transparan (Glassmorphism Gelap) -->
+        <div class="hero-visual">
+            <div class="hero-card-glass-dark">
+                <div class="glass-icon-gold">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                </div>
+                <h3>Layanan Digital Terpadu</h3>
+                <p>Akses peminjaman arsip, katalog buku, hingga ruang baca kini lebih praktis dalam satu genggaman.</p>
+                <div class="glass-stats-dark">
+                    <div><strong>100%</strong> Digitalisasi</div>
+                    <div><strong>Resmi</strong> & Terpercaya</div>
+                </div>
+            </div>
+        </div>
+
     </div>
-  </section>
+</section>
 
   <!-- ========================= ADDRESS BAR ========================= -->
   <div class="address-bar">

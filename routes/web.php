@@ -29,3 +29,7 @@ Route::get('/FAQarsip', function () {
 Route::get('/FAQperpus', function () {
     return view('FAQperpus');
 })->name('FAQperpus');
+
+Route::get('/struktur', function () {
+    return view('struktur');
+})->name('struktur');

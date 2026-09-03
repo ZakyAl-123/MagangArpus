@@ -70,10 +70,10 @@
     </defs>
   </svg>
 
-  <!-- ========================= HEADER ========================= -->
+<!-- ========================= HEADER ========================= -->
   <header class="site-header">
     <div class="container">
-      <a href="#" class="brand">
+      <a href="{{ route('dashboard') }}" class="brand">
         <div class="brand__logo" aria-hidden="true">
           <img src="{{ asset('asset/LOGO.png') }}" alt="Logo Dinas Arsip dan Perpustakaan Kota Semarang">
         </div>
@@ -86,29 +86,47 @@
       <button class="nav-toggle" aria-label="Buka menu navigasi" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
+      
       <nav class="main-nav" aria-label="Navigasi utama">
-  <ul class="main-nav__list">
-    <li><a href="{{ route('dashboard') }}" class="active">BERANDA</a></li>
-    <li class="dropdown">
-      <a href="#" class="dropdown-toggle">PROFIL <span class="arrow">&#9662;</span></a>
-      <ul class="dropdown-menu">
-        <li><a href="{{ route('visikota') }}">Visi Misi Kota</a></li>
-        <li><a href="{{ route('visiarpus') }}">Visi Misi Arpus</a></li>
-        <li><a href="{{ route('tupoksi') }}">Tupoksi Dinas Arsip dan Perpustakaan</a></li>
-        <li><a href="#">Struktur Organisasi</a></li>
-        <li><a href="#">Sejarah</a></li>
-      </ul>
-    </li>
-    <li><a href="https://ppid.arpusda.semarangkota.go.id/" target="_blank" rel="noopener noreferrer">PPID</a></li>
-    <li class="dropdown">
-      <a href="#" class="dropdown-toggle">FAQ <span class="arrow">&#9662;</span></a>
-      <ul class="dropdown-menu">
-        <li><a href="{{ route('FAQarsip') }}">Arsip</a></li>
-        <li><a href="{{ route('FAQperpus') }}">Perpustakaan</a></li>
-      </ul>
-    </li>
-    <li><a href="#kontak">KONTAK</a></li>
-  </ul>
-</nav>
+        <ul class="main-nav__list">
+          
+          <!-- BERANDA -->
+          <li>
+            <a href="{{ route('dashboard') }}" class="{{ request()->routeIs('dashboard') ? 'active' : '' }}">BERANDA</a>
+          </li>
+
+          <!-- PROFIL (Menyala jika salah satu halaman profil sedang dibuka) -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle {{ request()->routeIs('visikota', 'visiarpus', 'tupoksi', 'struktur') ? 'active' : '' }}">
+              PROFIL <span class="arrow">&#9662;</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="{{ route('visikota') }}" class="{{ request()->routeIs('visikota') ? 'active-sub' : '' }}">Visi Misi Kota</a></li>
+              <li><a href="{{ route('visiarpus') }}" class="{{ request()->routeIs('visiarpus') ? 'active-sub' : '' }}">Visi Misi Arpus</a></li>
+              <li><a href="{{ route('tupoksi') }}" class="{{ request()->routeIs('tupoksi') ? 'active-sub' : '' }}">Tupoksi Dinas Arsip dan Perpustakaan</a></li>
+              <li><a href="{{ route('struktur') }}" class="{{ request()->routeIs('struktur') ? 'active-sub' : '' }}">Struktur Organisasi</a></li>
+              <li><a href="#">Sejarah</a></li>
+            </ul>
+          </li>
+
+          <!-- PPID -->
+          <li><a href="https://ppid.arpusda.semarangkota.go.id/" target="_blank" rel="noopener noreferrer">PPID</a></li>
+
+          <!-- FAQ (Menyala jika halaman FAQ Arsip atau Perpus dibuka) -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle {{ request()->routeIs('FAQarsip', 'FAQperpus') ? 'active' : '' }}">
+              FAQ <span class="arrow">&#9662;</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="{{ route('FAQarsip') }}" class="{{ request()->routeIs('FAQarsip') ? 'active-sub' : '' }}">Arsip</a></li>
+              <li><a href="{{ route('FAQperpus') }}" class="{{ request()->routeIs('FAQperpus') ? 'active-sub' : '' }}">Perpustakaan</a></li>
+            </ul>
+          </li>
+
+          <!-- KONTAK -->
+          <li><a href="#kontak">KONTAK</a></li>
+
+        </ul>
+      </nav>
     </div>
   </header>

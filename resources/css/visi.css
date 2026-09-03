@@ -193,3 +193,10 @@
         font-size: 1rem;
     }
 }
+
+/* Penanda warna pada teks sub-menu dropdown yang sedang aktif */
+.dropdown-menu li a.active-sub {
+  color: var(--red-deep, #7a1414);
+  font-weight: 700;
+  background-color: #fcf8f8;
+}
