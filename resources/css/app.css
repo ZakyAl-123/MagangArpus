@@ -224,248 +224,157 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   border-radius: 2px;
 }
 
-/* ==========================================================================
-   HERO SECTION — LATAR BELAKANG MARUN ELEGAN & SELARAS
-   ========================================================================== */
-
-.hero-maroon {
+/* Section utama langsung berlatar belakang merah marun penuh */
+.hero-split-exact {
+    position: relative;
+    background-image: linear-gradient(rgba(122, 20, 20, 0.96), rgba(90, 15, 15, 0.98)), url('../asset/bakgron.png');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    padding: 100px 0 120px 0;
-    min-height: 85vh;
-    display: flex;
-    align-items: center;
+    padding-bottom: 80px;
     font-family: 'Open Sans', sans-serif;
-    position: relative;
     overflow: hidden;
 }
 
-.hero-container {
+/* Kotak putih di atas yang mengatur letak garis batas merahnya */
+.hero-white-box {
+    background-color: #ffffff;
+    padding: 60px 0 240px 0; /* <--- KUNCI: Tinggi area putih ke bawah */
+    margin-bottom: 0;
+}
+
+.showcase-container {
     max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 50px;
-    align-items: center;
-}
-
-/* Badge Atas */
-.hero-badge-light {
-    display: inline-block;
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: #fce7e7;
-    background: rgba(255, 255, 255, 0.12);
-    padding: 6px 16px;
-    border-radius: 30px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Judul Utama */
-.hero-main-title-light {
-    font-size: 2.8rem;
-    font-weight: 800;
-    color: #ffffff;
-    line-height: 1.25;
-    margin-bottom: 20px;
-}
-
-/* Aksen Warna Emas / Gold agar kontras dengan marun */
-.hero-accent-gold {
-    color: #e8b84b; 
-}
-
-/* Deskripsi Teks */
-.hero-description-light {
-    font-size: 1.05rem;
-    color: rgba(255, 255, 255, 0.85);
-    line-height: 1.6;
-    margin-bottom: 30px;
-    max-width: 600px;
-    text-align: justify;
-}
-
-/* Kotak Pencarian */
-.hero-search-box {
-    margin-bottom: 30px;
-    max-width: 550px;
-}
-
-.search-form-light {
-    display: flex;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
-    padding: 6px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-}
-
-.search-input-light {
-    flex-grow: 1;
-    border: none;
-    padding: 12px 16px;
-    font-size: 0.95rem;
-    outline: none;
-    color: #1a1a1a;
-    background: transparent;
-}
-
-.search-input-light::placeholder {
-    color: #888888;
-}
-
-.search-btn-gold {
-    background: #e8b84b;
-    color: #1a1a1a;
-    border: none;
-    padding: 12px 24px;
-    font-weight: 700;
-    font-size: 0.95rem;
-    border-radius: 8px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: background 0.2s ease;
-}
-
-.search-btn-gold svg {
-    width: 18px;
-    height: 18px;
-}
-
-.search-btn-gold:hover {
-    background: #d4a539;
-}
-
-/* Tombol Aksi */
-.hero-actions {
-    display: flex;
-    gap: 16px;
-}
-
-.btn-gold {
-    background: #e8b84b;
-    color: #1a1a1a;
-    padding: 14px 28px;
-    border-radius: 10px;
-    font-weight: 700;
-    font-size: 0.95rem;
-    text-decoration: none;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.btn-gold:hover {
-    background: #d4a539;
-    transform: translateY(-2px);
-}
-
-.btn-outline-light {
-    background: transparent;
-    color: #ffffff;
-    border: 2px solid rgba(255, 255, 255, 0.7);
-    padding: 12px 26px;
-    border-radius: 10px;
-    font-weight: 700;
-    font-size: 0.95rem;
-    text-decoration: none;
-    transition: all 0.2s ease;
-}
-
-.btn-outline-light:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: #ffffff;
-    transform: translateY(-2px);
-}
-
-/* Sisi Kanan (Kartu Kaca Gelap) */
-.hero-visual {
-    display: flex;
-    justify-content: center;
-}
-
-.hero-card-glass-dark {
-    background: rgba(20, 20, 20, 0.45);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    max-width: 400px;
     width: 100%;
-    border-top: 5px solid #e8b84b;
+    padding: 0 20px;
 }
 
-.glass-icon-gold {
-    width: 50px;
-    height: 50px;
-    background: rgba(232, 184, 75, 0.15);
-    color: #e8b84b;
+.showcase-top {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 40px;
+    align-items: flex-end;
+}
+
+.dark-tagline {
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    margin-bottom: 20px;
-}
-
-.glass-icon-gold svg {
-    width: 24px;
-    height: 24px;
-}
-
-.hero-card-glass-dark h3 {
-    font-size: 1.3rem;
-    font-weight: 800;
-    color: #ffffff;
+    gap: 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #7a1414;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     margin-bottom: 12px;
 }
 
-.hero-card-glass-dark p {
-    font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.8);
-    line-height: 1.5;
-    margin-bottom: 24px;
+.line-accent-dark {
+    width: 24px;
+    height: 2px;
+    background-color: #7a1414;
 }
 
-.glass-stats-dark {
+.dark-title {
+    font-size: 2.6rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.text-maroon {
+    color: #7a1414;
+}
+
+.service-pills {
     display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.7);
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.glass-stats-dark strong {
-    color: #e8b84b;
-    font-size: 1.1rem;
+.pill-light {
+    background: #fdf2f2;
+    border: 1px solid rgba(122, 20, 20, 0.15);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #7a1414;
 }
 
-/* Responsif HP */
-@media (max-width: 992px) {
-    .hero-container {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        text-align: center;
-    }
-    .hero-description-light, .hero-search-box {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .hero-actions, .search-form-light {
-        justify-content: center;
-    }
-    .hero-main-title-light {
-        font-size: 2.2rem;
-    }
-    .hero-visual {
-        display: none;
-    }
+.showcase-desc-dark {
+    font-size: 0.95rem;
+    color: #555555;
+    line-height: 1.6;
+}
+
+/* KUNCI: Menarik foto & statistik naik ke atas menimpa garis batas putih-merah tepat di tengah */
+.showcase-bottom-overlapping {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 30px;
+    align-items: stretch;
+    margin-top: -160px; /* <--- Ini yang bikin garis merahnya motong pas di tengah foto/statistik */
+    position: relative;
+    z-index: 2;
+}
+
+.showcase-image-wrapper {
+    width: 100%;
+    height: 380px;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    background: #ffffff;
+}
+
+.showcase-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.showcase-stats-card {
+    background: #e8b84b;
+    color: #1a1a1a;
+    padding: 30px 24px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.stat-box-item {
+    border-bottom: 1px solid rgba(26, 26, 26, 0.15);
+    padding-bottom: 12px;
+}
+
+.stat-box-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.stat-number {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1;
+}
+
+.plus {
+    color: #7a1414;
+}
+
+.stat-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #333333;
+    margin-top: 4px;
+    text-transform: uppercase;
 }
 /* ==========================================================================
    ADDRESS BAR

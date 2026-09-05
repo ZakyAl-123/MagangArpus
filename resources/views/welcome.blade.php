@@ -1,54 +1,56 @@
 @include('layouts.header')
-<!-- ========================= HERO SECTION (LATAR BELAKANG MARUN) ========================= -->
-<section class="hero-maroon" style="background-image: linear-gradient(rgba(122, 20, 20, 0.92), rgba(90, 15, 15, 0.95)), url('{{ asset('asset/bakgron.png') }}');">
-    <div class="container hero-container">
-        
-        <div class="hero-content">
-            <h1 class="hero-main-title-light">
-                Selamat Datang di Website<br>
-                <span class="hero-accent-gold">Dinas Arsip dan Perpustakaan</span> Kota Semarang
-            </h1>
-            <p class="hero-description-light">
-                Menyediakan akses mudah terhadap layanan kearsipan daerah, koleksi bahan perpustakaan, serta transparansi informasi publik yang cepat, akurat, dan terpercaya.
-            </p>
-
-            <!-- Kotak Pencarian Cepat -->
-            <div class="hero-search-box">
-                <form action="#" method="GET" class="search-form-light">
-                    <input type="text" name="q" placeholder="Cari judul buku, arsip, atau layanan..." class="search-input-light">
-                    <button type="submit" class="search-btn-gold">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                        Cari
-                    </button>
-                </form>
-            </div>
-
-            <!-- Tombol Aksi -->
-            <div class="hero-actions">
-                <a href="{{ route('tupoksi') }}" class="btn-gold">
-                    Tentang Kami
-                </a>
-                <a href="{{ route('FAQarsip') }}" class="btn-outline-light">
-                    Pusat Bantuan
-                </a>
-            </div>
-        </div>
-
-        <!-- Sisi Kanan: Kartu Estetik Transparan (Glassmorphism Gelap) -->
-        <div class="hero-visual">
-            <div class="hero-card-glass-dark">
-                <div class="glass-icon-gold">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+<section class="hero-split-exact">
+    <!-- Bagian Atas Putih yang lebarnya menutupi setengah foto -->
+    <div class="hero-white-box">
+        <div class="container showcase-container">
+            <div class="showcase-top">
+                <div class="showcase-top-left">
+                    <div class="showcase-tagline dark-tagline">
+                        <span class="line-accent-dark"></span>
+                        PORTAL RESMI DINAS ARSIP & PERPUSTAKAAN
+                    </div>
+                    <h1 class="showcase-main-title dark-title">
+                        Inovasi Layanan Menuju <br>
+                        <span class="text-maroon">Arsip & Literasi Sempurna</span>
+                    </h1>
+                    <div class="service-pills">
+                        <span class="pill-light">Layanan Kearsipan</span>
+                        <span class="pill-light">Pengolahan Buku</span>
+                        <span class="pill-light">Konsultasi Arsip</span>
+                        <span class="pill-light">Wisata Edukasi</span>
+                        <span class="pill-light">Ruang Baca Digital</span>
+                    </div>
                 </div>
-                <h3>Layanan Digital Terpadu</h3>
-                <p>Akses peminjaman arsip, katalog buku, hingga ruang baca kini lebih praktis dalam satu genggaman.</p>
-                <div class="glass-stats-dark">
-                    <div><strong>100%</strong> Digitalisasi</div>
-                    <div><strong>Resmi</strong> & Terpercaya</div>
+                <div class="showcase-top-right">
+                    <p class="showcase-desc-dark">
+                        Menyediakan keterbukaan informasi publik, kemudahan akses koleksi pustaka, serta pengelolaan arsip daerah yang modern, akurat, dan terpercaya bagi masyarakat Kota Semarang.
+                    </p>
                 </div>
             </div>
         </div>
+    </div>
 
+    <!-- Bagian Foto & Statistik (Ditarik ke atas setengah badan agar terpotong pas di tengah garis merah) -->
+    <div class="container showcase-container">
+        <div class="showcase-bottom-overlapping">
+            <div class="showcase-image-wrapper">
+                <img src="{{ asset('asset/Card Background Image.png') }}" alt="Gedung dan Aktivitas Dinas Arsip" class="showcase-main-img">
+            </div>
+            <div class="showcase-stats-card">
+                <div class="stat-box-item">
+                    <div class="stat-number">10K<span class="plus">+</span></div>
+                    <div class="stat-title">Arsip & Dokumen</div>
+                </div>
+                <div class="stat-box-item">
+                    <div class="stat-number">30+</div>
+                    <div class="stat-title">Tahun Pengabdian</div>
+                </div>
+                <div class="stat-box-item">
+                    <div class="stat-number">5K<span class="plus">+</span></div>
+                    <div class="stat-title">Pengunjung & Anggota</div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
