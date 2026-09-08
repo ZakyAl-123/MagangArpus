@@ -546,7 +546,43 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-size: 0.85rem;
   color: #333;
 }
+.sibaja-card {
+    position: relative; /* Menjaga posisi dropdown agar relatif terhadap card */
+}
 
+.sibaja-results-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    right: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    margin-top: 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 99;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.sibaja-result-item {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    color: #333333;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.sibaja-result-item:hover {
+    background: #fdf2f2;
+    color: #7a1414;
+    font-weight: 600;
+}
+
+.sibaja-result-item:last-child {
+    border-bottom: none;
+}
 /* Responsif untuk Layar Sedang / HP */
 @media (max-width: 992px) {
   .menu-grid-modern {
@@ -943,245 +979,370 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* ==========================================================================
-   BERITA MEDIA
+   BERITA MEDIA SECTION — TEMA SETARA
    ========================================================================== */
-/* Kontainer Utama Media Strip Modern */
+
+.media-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.media-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Menggunakan header yang seragam dengan section lain */
+.gallery-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.gallery-tagline {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #7a1414;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.line-accent {
+    width: 24px;
+    height: 2px;
+    background-color: #7a1414;
+}
+
+.gallery-title {
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: #1a1a1a;
+}
+
+.text-maroon {
+    color: #7a1414;
+}
+
+/* Tata letak kartu logo media */
 .media-strip-modern {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 24px 30px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-  border: 1px solid #eaeaea;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Judul Bagian */
-.media-strip-modern .media-strip__title {
-  font-size: 1.1rem;
-  font-weight: 800;
-  color: #222;
-  text-align: center;
-  margin-bottom: 20px;
-  position: relative;
-  padding-bottom: 8px;
-}
-
-.media-strip-modern .media-strip__title::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 3px;
-  background-color: #c92a2a; /* Garis aksen merah khas */
-  border-radius: 2px;
-}
-
-/* Tata Letak Logo (Grid / Flex) */
-.media-strip-modern .media-strip__logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-/* Desain Kartu Tombol Media */
 .media-card-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fdfdfd;
-  border: 1px solid #e5e5e5;
-  border-radius: 12px;
-  padding: 12px 20px;
-  width: 160px;
-  height: 75px;
-  text-decoration: none;
-  transition: all 0.25s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    padding: 20px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    text-decoration: none;
 }
 
-/* Efek Interaktif Saat Kursor Diarahkan (Hover) */
 .media-card-btn:hover {
-  transform: translateY(-4px);
-  border-color: #c92a2a;
-  box-shadow: 0 8px 16px rgba(201, 42, 42, 0.08);
-  background: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(122, 20, 20, 0.12);
+    border-color: rgba(122, 20, 20, 0.3);
 }
 
-/* Pengatur Gambar Logo di Dalam Tombol */
 .media-logo-img {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .media-logo-img img {
-  max-width: 100%;
-  max-height: 40px; /* Membatasi tinggi agar seragam */
-  object-fit: contain;
-  opacity: 1;
-  transition: filter 0.25s ease, opacity 0.25s ease;
+    max-width: 100%;
+    max-height: 45px;
+    object-fit: contain;
+    filter: none; /* <--- Memastikan warna logo asli tampil sepenuhnya */
+    opacity: 1;    /* <--- Tidak ada transparansi */
+    transition: transform 0.3s ease;
 }
 
-/* Logo menjadi berwarna penuh saat kursor mendekat */
 .media-card-btn:hover .media-logo-img img {
-  filter: grayscale(0%);
-  opacity: 1;
+    transform: scale(1.08); /* <--- Efek memperbesar sedikit saat disentuh kursor */
+}
+
+/* Responsif untuk Layar HP / Tablet */
+@media (max-width: 992px) {
+    .media-strip-modern {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .media-strip-modern {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .gallery-title {
+        font-size: 1.8rem;
+    }
 }
 
 /* ==========================================================================
    LAYANAN PERPUSNAS
    ========================================================================== */
-/* Padding dan Area Utama */
 .layanan-modern {
-  padding: 40px 0;
+    padding: 90px 0;
+    background-color: #fbfbfb;
+    font-family: 'Open Sans', sans-serif;
 }
 
-/* Judul Section */
-.layanan-modern .layanan__title {
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: #222;
-  text-align: center;
-  margin-bottom: 35px;
-  letter-spacing: 0.5px;
+.layanan-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* Layout Grid 2 Kolom */
-.layanan-modern .layanan__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 20px;
+/* Grid Layout (3 Kolom) */
+.layanan__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
 }
 
-/* Desain Kartu Layanan */
+/* Kartu Layanan Interaktif */
 .layanan-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #ffffff;
-  border: 1px solid #eaeaea;
-  border-left: 4px solid #c92a2a; /* Aksen garis merah khas di sisi kiri */
-  border-radius: 12px;
-  padding: 20px 24px;
-  text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-  transition: all 0.25s ease;
+    position: relative;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-/* Efek Saat Kursor Diarahkan (Hover) */
+/* Efek Cahaya / Glow Animasi saat Disentuh */
+.layanan-card__glow {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(232, 184, 75, 0.1), transparent);
+    transition: 0.6s ease;
+}
+
+.layanan-card:hover .layanan-card__glow {
+    left: 100%;
+}
+
+/* Animasi & Efek Hover Kartu */
 .layanan-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  border-color: #d1d1d1;
-  border-left-color: #a61e1e;
+    transform: translateY(-6px);
+    border-color: #7a1414;
+    box-shadow: 0 18px 40px rgba(122, 20, 20, 0.12);
+    background: linear-gradient(135deg, #ffffff 80%, #fdf5f5 100%);
 }
 
-/* Teks Judul dan Subjudul */
 .layanan-card__info {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 2;
 }
 
-.layanan-card .layanan__pill-title {
-  font-size: 1rem;
-  font-weight: 800;
-  color: #111;
-  letter-spacing: 0.5px;
+.layanan__pill-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #7a1414;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
 }
 
-.layanan-card .layanan__pill-sub {
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: #666;
-  text-transform: capitalize; /* Membuat huruf lebih rapi dibaca */
+.layanan-card:hover .layanan__pill-title {
+    color: #5a0f0f;
 }
 
-/* Ikon Panah Eksternal */
+.layanan__pill-sub {
+    font-size: 0.82rem;
+    color: #666666;
+    line-height: 1.4;
+}
+
+/* Ikon Panah Eksternal dengan Animasi Melompat */
 .layanan-card__icon {
-  color: #999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s ease, color 0.2s ease;
+    width: 38px;
+    height: 38px;
+    background: #fdf2f2;
+    color: #7a1414;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    z-index: 2;
+    transition: all 0.3s ease;
 }
 
-/* Animasi ikon bergeser sedikit saat card di-hover */
 .layanan-card:hover .layanan-card__icon {
-  transform: translate(3px, -3px);
-  color: #c92a2a;
+    background: #e8b84b;
+    color: #1a1a1a;
+    transform: scale(1.1) rotate(15deg);
+    box-shadow: 0 4px 12px rgba(232, 184, 75, 0.4);
 }
 
+/* Responsif untuk Layar HP / Tablet */
+@media (max-width: 992px) {
+    .layanan__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .layanan__grid {
+        grid-template-columns: 1fr;
+    }
+}
 /* ==========================================================================
-   APLIKASI KAMI
+   APLIKASI KAMI SECTION — MODERN, ANIMATIF & SETEMA
    ========================================================================== */
-.aplikasi {
-  text-align: center;
-  padding: 10px 0 60px;
-}
-.aplikasi__title {
-  font-weight: 800;
-  font-size: 1.1rem;
-  text-decoration: underline;
-  text-underline-offset: 6px;
-  margin-bottom: 30px;
-}
-.aplikasi__logos {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  flex-wrap: wrap;
-}
-.aplikasi__logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-}
-.aplikasi__logo-icon {
-  width: 150px; /* Perbesar nilai ini jika logo terlalu kecil */
-  height: 60px; /* Samakan dengan lebar agar tetap presisi */
-  border-radius: 12px;
-  background: var(--bg-light);
-  display: flex; 
-  align-items: center; 
-  justify-content: center;
-  color: var(--red-primary);
-  font-size: 1.4rem;
-  box-shadow: var(--shadow-sm);
-  cursor: pointer;
-  text-decoration: none; 
-  transition: transform 0.3s ease, box-shadow 0.3s ease; 
-}
-.aplikasi__logo-name {
-  font-weight: 800;
-  font-size: 0.85rem;
-  color: var(--red-primary);
-  font-style: italic;
+
+.aplikasi-modern {
+    padding: 90px 0;
+    background-color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.aplikasi__logo-icon img {
-  height: 100%; /* Memaksa gambar mengikuti tinggi kontainer (dikurangi padding) */
-  width: auto; /* Membiarkan lebar gambar melar/menyusut sesuai proporsi aslinya */
-  object-fit: contain;
+.aplikasi-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.aplikasi__logos {
-  display: flex;
-  justify-content: center;
-  align-items: center; /* Tambahkan baris ini agar semua kotak sejajar di tengah */
-  gap: 60px;
-  flex-wrap: wrap;
+.aplikasi__grid-modern {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;                     /* <--- Jarak antar card diperkecil (awalnya 40px) */
+    margin-top: 40px;
+    max-width: 750px;              /* <--- Lebar total grid diperkecil (awalnya 900px) */
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.aplikasi__logo-icon:hover {
-  transform: translateY(-5px); /* Membuat tombol tampak sedikit terangkat ke atas */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Memberikan bayangan yang lebih tebal */
+.aplikasi-card-modern {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    border-radius: 18px;           /* <--- Sudut lengkung sedikit disesuaikan */
+    padding: 24px 20px;            /* <--- Padding dalam card diperkecil (awalnya 40px) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Efek Cahaya / Glow Animasi saat Disentuh */
+.aplikasi-card__glow {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(122, 20, 20, 0.05), transparent);
+    transition: 0.7s ease;
+}
+
+.aplikasi-card-modern:hover .aplikasi-card__glow {
+    left: 100%;
+}
+
+/* Animasi & Efek Hover Kartu */
+.aplikasi-card-modern:hover {
+    transform: translateY(-8px);
+    border-color: rgba(122, 20, 20, 0.3);
+    box-shadow: 0 25px 50px rgba(122, 20, 20, 0.15);
+    background: linear-gradient(160deg, #ffffff 0%, #fefcfc 100%);
+}
+
+.aplikasi-logo-wrapper {
+    width: 100%;
+    height: 75px;                  /* <--- Tinggi area logo diperkecil (awalnya 120px) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;           /* <--- Jarak bawah logo diperkecil (awalnya 25px) */
+    z-index: 2;
+}
+
+.aplikasi-logo-img {
+    max-width: 70%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 3px 6px rgba(0,0,0,0.08));
+    transition: transform 0.4s ease;
+}
+
+.aplikasi-card-modern:hover .aplikasi-logo-img {
+    transform: scale(1.05);
+}
+
+/* Konten Teks */
+.aplikasi-card__info {
+    text-align: center;
+    z-index: 2;
+}
+
+.aplikasi-card__title {
+    font-size: 1.25rem;            /* <--- Ukuran judul diperkecil (awalnya 1.6rem) */
+    font-weight: 800;
+    color: #7a1414;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+    transition: color 0.3s ease;
+}
+
+.aplikasi-card-modern:hover .aplikasi-card__title {
+    color: #5a0f0f;
+}
+
+
+.aplikasi-card__sub {
+    font-size: 0.82rem;            /* <--- Ukuran sub-teks diperkecil (awalnya 0.95rem) */
+    color: #666666;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* Responsif untuk Layar HP / Tablet */
+@media (max-width: 768px) {
+    .aplikasi__grid-modern {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    .aplikasi-card-modern {
+        padding: 30px;
+    }
+    .aplikasi-logo-wrapper {
+        height: 100px;
+    }
 }
 
 /* ==========================================================================
@@ -1591,4 +1752,434 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     background: #5a0f0f;
     transform: translateY(-2px);
     color: #ffffff;
+}
+
+/* ==========================================================================
+   GALERI FOTO SECTION — BERSIH TANPA DESKRIPSI
+   ========================================================================== */
+
+.gallery-section {
+    padding: 80px 0;
+    background-color: #fcfcfc;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.gallery-tagline {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #7a1414;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.gallery-title {
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: #1a1a1a;
+}
+
+.text-maroon {
+    color: #7a1414;
+}
+
+/* Grid Layout Foto */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Kartu Pembungkus Foto */
+.gallery-item {
+    border-radius: 16px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(122, 20, 20, 0.12);
+}
+
+.gallery-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-img {
+    transform: scale(1.08);
+}
+
+/* Efek Overlay Saat Kursor Mendekat (Hover) */
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(122, 20, 20, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(2px);
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-icon {
+    width: 48px;
+    height: 48px;
+    background: #e8b84b;
+    color: #1a1a1a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-icon {
+    transform: scale(1);
+}
+
+.gallery-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* Responsif untuk Layar HP / Tablet */
+@media (max-width: 992px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    .gallery-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* ==========================================================================
+   CSS TAMBAHAN UNTUK INTERAKTIF ZOOM (LIGHTBOX)
+   ========================================================================== */
+
+.gallery-item {
+    cursor: pointer; /* Mengubah kursor jadi bentuk klik */
+}
+
+/* Tampilan Modal Lightbox */
+.lightbox-modal {
+    display: none; /* Sembunyikan default */
+    position: fixed;
+    z-index: 9999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Gambar yang diperbesar di dalam modal */
+.lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 85%;
+    max-height: 80vh;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Tombol Keluar (X) di pojok kanan atas modal */
+.lightbox-close {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: 300;
+    transition: color 0.2s ease;
+    cursor: pointer;
+}
+
+.lightbox-close:hover {
+    color: #e8b84b; /* Berubah jadi warna emas saat disentuh kursor */
+}
+
+/* ==========================================================================
+   VIDEO GALLERY SECTION — BERSIH TANPA DESKRIPSI
+   ========================================================================== */
+
+.video-gallery-section {
+    padding: 80px 0;
+    background-color: #ffffff; /* Bisa diubah ke #fcfcfc jika ingin selang-seling warna section */
+    font-family: 'Open Sans', sans-serif;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.video-item {
+    border-radius: 16px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(122, 20, 20, 0.12);
+}
+
+/* Kotak Pembungkus Responsif Rasio 16:9 untuk YouTube */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Rasio aspek 16:9 */
+    height: 0;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Responsif untuk Layar HP / Tablet */
+@media (max-width: 992px) {
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================================
+   TENTANG KEARSIPAN & PERPUSTAKAAN SECTION
+   ========================================================================== */
+
+.about-kp-section {
+    padding: 90px 0;
+    background-color: #f9f9f9;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.about-kp-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-kp-header {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.about-kp-tagline {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #7a1414;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.line-accent {
+    width: 24px;
+    height: 2px;
+    background-color: #7a1414;
+}
+
+.about-kp-main-title {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #1a1a1a;
+}
+
+.text-maroon {
+    color: #7a1414;
+}
+
+/* Grid Dua Kolom */
+.about-kp-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-items: stretch;
+}
+
+/* Kartu Profil */
+.about-kp-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-kp-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(122, 20, 20, 0.12);
+}
+
+/* Gambar Ilustrasi di Atas Kartu */
+.about-kp-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+}
+
+.about-kp-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.about-kp-card:hover .about-kp-img {
+    transform: scale(1.05);
+}
+
+/* Badge di atas gambar */
+.about-kp-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #7a1414;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.gold-badge {
+    background: #e8b84b;
+    color: #1a1a1a;
+}
+
+/* Konten Teks */
+.about-kp-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.about-kp-title {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #7a1414;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.about-kp-text {
+    font-size: 0.95rem;
+    color: #444444;
+    line-height: 1.7;
+    margin-bottom: 14px;
+    text-align: justify;
+}
+
+.about-kp-citation {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #7a1414;
+    margin-bottom: 14px;
+    background: #fdf2f2;
+    padding: 6px 12px;
+    border-radius: 6px;
+    display: inline-block;
+    width: fit-content;
+}
+
+.highlight-text {
+    background: #faf8f5;
+    padding: 15px;
+    border-left: 4px solid #e8b84b;
+    border-radius: 0 8px 8px 0;
+    margin-top: 5px;
+}
+
+/* Responsif untuk Layar HP / Tablet */
+@media (max-width: 992px) {
+    .about-kp-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .about-kp-main-title {
+        font-size: 2rem;
+    }
 }

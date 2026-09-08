@@ -105,7 +105,7 @@
               <li><a href="{{ route('visiarpus') }}" class="{{ request()->routeIs('visiarpus') ? 'active-sub' : '' }}">Visi Misi Arpus</a></li>
               <li><a href="{{ route('tupoksi') }}" class="{{ request()->routeIs('tupoksi') ? 'active-sub' : '' }}">Tupoksi Dinas Arsip dan Perpustakaan</a></li>
               <li><a href="{{ route('struktur') }}" class="{{ request()->routeIs('struktur') ? 'active-sub' : '' }}">Struktur Organisasi</a></li>
-              <li><a href="#">Sejarah</a></li>
+              <li><a href="{{ route('tentang') }}" class="{{ request()->routeIs('tentang') ? 'active-sub' : '' }}">Tentang Arpusda</a></li>
             </ul>
           </li>
 

@@ -11,16 +11,16 @@
           <p>Badan Arsip dan Perpustakaan berkomitmen untuk mewujudkan layanan kearsipan yang atraktif dalam mendukung
             Semarang semakin hebat.</p>
           <div class="footer-social">
-            <a href="#" aria-label="Facebook"><svg class="icon">
+            <a href="https://www.facebook.com/groups/dinasarpus.semarangkota" aria-label="Facebook"><svg class="icon">
                 <use href="#icon-facebook" />
               </svg></a>
-            <a href="#" aria-label="Instagram"><svg class="icon">
+            <a href="https://www.instagram.com/dinasarpus_semarang/" aria-label="Instagram"><svg class="icon">
                 <use href="#icon-instagram" />
               </svg></a>
-            <a href="#" aria-label="Telegram"><svg class="icon">
+            <a href="https://t.me/sobatbukuarpuskotasemarang" aria-label="Telegram"><svg class="icon">
                 <use href="#icon-telegram" />
               </svg></a>
-            <a href="#" aria-label="YouTube"><svg class="icon">
+            <a href="https://www.youtube.com/channel/UCKW_vxNCRgWO60Ny1wC_rUQ" aria-label="YouTube"><svg class="icon">
                 <use href="#icon-youtube" />
               </svg></a>
           </div>
@@ -29,22 +29,22 @@
         <div class="footer-col">
           <h4>Tautan Cepat</h4>
           <ul>
-            <li><a href="#">Semarang Kota <svg class="icon">
+            <li><a href="https://semarangkota.go.id/" target="_blank" aria-label="Semarang Kota">Semarang Kota<svg class="icon">
                   <use href="#icon-external" />
                 </svg></a></li>
-            <li><a href="#">SIPPN <svg class="icon">
+            <li><a href="https://sippn.menpan.go.id/" target="_blank" aria-label="SIPPN">SIPPN<svg class="icon">
                   <use href="#icon-external" />
                 </svg></a></li>
-            <li><a href="#">Prov. Jateng <svg class="icon">
+            <li><a href="https://jatengprov.go.id/" target="_blank" aria-label="Prov. Jateng">Prov.Jateng<svg class="icon">
                   <use href="#icon-external" />
                 </svg></a></li>
-            <li><a href="#">Perpusnas <svg class="icon">
+            <li><a href="https://www.perpusnas.go.id/" target="_blank" aria-label="Perpusnas">Perpusnas<svg class="icon">
                   <use href="#icon-external" />
                 </svg></a></li>
-            <li><a href="#">ANRI <svg class="icon">
+            <li><a href="https://www.anri.go.id/" target="_blank" aria-label="ANRI">ANRI<svg class="icon">
                   <use href="#icon-external" />
                 </svg></a></li>
-            <li><a href="#">Arpus Jateng <svg class="icon">
+            <li><a href="https://arpusda.jatengprov.go.id/" target="_blank" aria-label="Arpus Jateng">Arpus Jateng <svg class="icon">
                   <use href="#icon-external" />
                 </svg></a></li>
           </ul>
@@ -53,16 +53,16 @@
         <div class="footer-col">
           <h4>Layanan</h4>
           <ul>
-            <li><a href="#">Form Permohonan Informasi <svg class="icon">
+            <li><a href="https://permohonan.ppid.semarangkota.go.id/user/add">Form Permohonan Informasi <svg class="icon">
                   <use href="#icon-external" />
                 </svg></a></li>
-            <li><a href="#">Pengaduan Layanan Publik <svg class="icon">
+            <li><a href="https://sapambakita.lapor.go.id/">Pengaduan Layanan Publik <svg class="icon">
                   <use href="#icon-external" />
                 </svg></a></li>
-            <li><a href="#">Pesan Ruang <svg class="icon">
+            <li><a href="https://pesanruang.arpusda.semarangkota.go.id/">Pesan Ruang <svg class="icon">
                   <use href="#icon-external" />
                 </svg></a></li>
-            <li><a href="#">Survey Layanan <svg class="icon">
+            <li><a href="https://www.asikmas.semarangkota.go.id/">Survey Layanan <svg class="icon">
                   <use href="#icon-external" />
                 </svg></a></li>
           </ul>

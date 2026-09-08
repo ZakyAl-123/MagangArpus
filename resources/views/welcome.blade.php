@@ -7,7 +7,7 @@
                 <div class="showcase-top-left">
                     <div class="showcase-tagline dark-tagline">
                         <span class="line-accent-dark"></span>
-                        PORTAL RESMI DINAS ARSIP & PERPUSTAKAAN
+                        WEBSITE RESMI DINAS ARSIP & PERPUSTAKAAN
                     </div>
                     <h1 class="showcase-main-title dark-title">
                         Inovasi Layanan Menuju <br>
@@ -34,7 +34,7 @@
     <div class="container showcase-container">
         <div class="showcase-bottom-overlapping">
             <div class="showcase-image-wrapper">
-                <img src="{{ asset('asset/Card Background Image.png') }}" alt="Gedung dan Aktivitas Dinas Arsip" class="showcase-main-img">
+                <img src="{{ asset('asset/bakgron.png') }}" alt="Gedung dan Aktivitas Dinas Arsip" class="showcase-main-img">
             </div>
             <div class="showcase-stats-card">
                 <div class="stat-box-item">
@@ -114,10 +114,10 @@
           <h3 class="menu-card-title">AGENDA</h3>
         </div>
         <div class="menu-card-links">
-          <a href="#">Acara Dinas</a>
-          <a href="#">Acara Pemkot</a>
-          <a href="#">Acara Perpusnas</a>
-          <a href="#">Acara ANRI</a>
+          <a href="https://infokegiatan.arpusda.semarangkota.go.id/">Acara Dinas</a>
+          <a href="https://infokegiatan.semarangkota.go.id/">Acara Pemkot</a>
+          <a href="https://agenda.perpusnas.go.id/">Acara Perpusnas</a>
+          <a href="https://www.anri.go.id/publikasi/event">Acara ANRI</a>
         </div>
       </div>
 
@@ -130,10 +130,10 @@
           <h3 class="menu-card-title">MEDIA SIAR</h3>
         </div>
         <div class="menu-card-links">
-          <a href="#">Sobat Buku</a>
+          <a href="https://t.me/sobatbukuarpuskotasemarang">Sobat Buku</a>
           <a href="#">Video Converse</a>
-          <a href="#">E-Radio</a>
-          <a href="#">Streaming</a>
+          <a href="https://e-radio.semarangkota.go.id/">E-Radio</a>
+          <a href="https://www.youtube.com/channel/UCKW_vxNCRgWO60Ny1wC_rUQ">Streaming</a>
         </div>
       </div>
 
@@ -146,26 +146,29 @@
           <h3 class="menu-card-title">GALERI</h3>
         </div>
         <div class="menu-card-links">
-          <a href="#">Foto</a>
-          <a href="#">Video</a>
+          <a href="{{ route('foto') }}">Foto</a>
+          <a href="{{ route('video') }}">Video</a>
           <a href="#">Brosur / Poster</a>
           <a href="#">Arsip Dokumenter</a>
         </div>
       </div>
 
       <!-- 4. SIBAJA (Pencarian Istilah) -->
-      <div class="menu-card-mod sibaja-card">
-        <div class="sibaja-content">
-          <h3 class="sibaja-title">Sibaja</h3>
-          <p class="sibaja-sub">(Senarai Istilah Budaya Jawa)</p>
-        </div>
-        <div class="sibaja-search-box">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          <label for="sibaja-search" class="visually-hidden">Cari istilah budaya Jawa</label>
-          <input id="sibaja-search" type="text" placeholder="Cari istilah...">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v1a7 7 0 0 1-14 0v-1"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
-        </div>
-      </div>
+      <div class="menu-card-mod sibaja-card" style="position: relative;">
+    <div class="sibaja-content">
+        <h3 class="sibaja-title">Sibaja</h3>
+        <p class="sibaja-sub">(Senarai Istilah Budaya Jawa)</p>
+    </div>
+    <div class="sibaja-search-box">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <label for="sibaja-search" class="visually-hidden">Cari istilah budaya Jawa</label>
+        <input id="sibaja-search" type="text" placeholder="Cari istilah...">
+        <svg id="mic-btn" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="cursor: pointer;" title="Cari dengan suara"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v1a7 7 0 0 1-14 0v-1"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+    </div>
+    
+    <!-- Kotak Dropdown untuk menampilkan hasil pencarian -->
+    <div id="sibaja-results" class="sibaja-results-dropdown" style="display: none;"></div>
+</div>
 
     </div>
   </div>
@@ -188,7 +191,7 @@
     <div class="geliat__actions">
       
       <!-- 1. Cari Buku -->
-      <a class="geliat__action-card" href="#">
+      <a class="geliat__action-card" href="https://arpusda.semarangkota.go.id/sicaper"">
         <div class="geliat__action-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
         </div>
@@ -196,7 +199,7 @@
       </a>
 
       <!-- 2. Cari Arsip -->
-      <a class="geliat__action-card" href="#">
+      <a class="geliat__action-card" href="https://selaras.semarangkota.go.id/">
         <div class="geliat__action-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
         </div>
@@ -204,7 +207,7 @@
       </a>
 
       <!-- 3. Cari Peraturan -->
-      <a class="geliat__action-card" href="#">
+      <a class="geliat__action-card" href="https://arpusda.semarangkota.go.id/sicatur">
         <div class="geliat__action-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
         </div>
@@ -212,7 +215,7 @@
       </a>
 
       <!-- 4. Usulan Buku -->
-      <a class="geliat__action-card" href="#">
+      <a class="geliat__action-card" href="https://arpusda.semarangkota.go.id/siulan">
         <div class="geliat__action-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
         </div>
@@ -220,16 +223,15 @@
       </a>
 
       <!-- 5. Donasi Buku -->
-      <a class="geliat__action-card" href="#">
+      <a class="geliat__action-card" href="https://arpusda.semarangkota.go.id/sidoku">
         <div class="geliat__action-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
         </div>
         <span class="geliat__action-label">Donasi Buku</span>
       </a>
 
-      <!-- 6. Menu Baru: SABDA -->
       <!-- 6. Menu Baru: SABDA (Menggunakan Gambar) -->
-      <a class="geliat__action-card" href="#">
+      <a class="geliat__action-card" href="https://bastra.kemendikdasmen.go.id/sabda/">
         <div class="geliat__action-icon img-icon">
           <img src="{{ asset('asset/sabda.png') }}" alt="SABDA">
         </div>
@@ -399,11 +401,17 @@
     </div>
   </section>
 
-  <!-- ========================= BERITA MEDIA ========================= -->
-<section class="container" style="margin: 40px auto;">
-  <div class="media-strip-modern">
-    <h3 class="media-strip__title">Berita Media</h3>
-    <div class="media-strip__logos">
+<!-- ========================= BERITA MEDIA SECTION ========================= -->
+<section class="media-section">
+  <div class="container media-container">
+    
+    <!-- Judul Section -->
+    <div class="gallery-header">
+      <h2 class="gallery-title" style="font-size: 1.8rem !important;">Berita <span class="text-maroon">Media</span></h2>
+    </div>
+
+    <!-- Strip Logo Media -->
+    <div class="media-strip-modern">
       
       <!-- Media 1: Detikcom -->
       <a href="https://www.detik.com" target="_blank" class="media-card-btn">
@@ -444,15 +452,21 @@
   </div>
 </section>
 
-  <!-- ========================= LAYANAN PERPUSNAS ========================= -->
-  <section class="layanan-modern">
-  <div class="container">
-    <h2 class="layanan__title">LAYANAN PERPUSTAKAAN NASIONAL REPUBLIK INDONESIA</h2>
+
+<section class="layanan-modern">
+  <div class="container layanan-container">
     
+    <!-- Judul Section dengan Standar Tema -->
+    <div class="gallery-header">
+      <h2 class="gallery-title" style="font-size: 1.8rem !important;">Layanan <span class="text-maroon">Perpusnas RI</span></h2>
+    </div>
+    
+    <!-- Grid Layanan -->
     <div class="layanan__grid">
       
       <!-- Item 1 -->
-      <a class="layanan-card" href="#" target="_blank">
+      <a class="layanan-card" href="https://dashboard-ipusnas.perpusnas.go.id/" target="_blank">
+        <div class="layanan-card__glow"></div>
         <div class="layanan-card__info">
           <span class="layanan__pill-title">IPUSNAS</span>
           <span class="layanan__pill-sub">Perpustakaan Digital Bergerak</span>
@@ -463,7 +477,8 @@
       </a>
 
       <!-- Item 2 -->
-      <a class="layanan-card" href="#" target="_blank">
+      <a class="layanan-card" href="https://opac.perpusnas.go.id/" target="_blank">
+        <div class="layanan-card__glow"></div>
         <div class="layanan-card__info">
           <span class="layanan__pill-title">OPAC</span>
           <span class="layanan__pill-sub">Online Public Access Catalog</span>
@@ -474,7 +489,8 @@
       </a>
 
       <!-- Item 3 -->
-      <a class="layanan-card" href="#" target="_blank">
+      <a class="layanan-card" href="https://e-resources.perpusnas.go.id/" target="_blank">
+        <div class="layanan-card__glow"></div>
         <div class="layanan-card__info">
           <span class="layanan__pill-title">E-RES</span>
           <span class="layanan__pill-sub">Koleksi Digital Berlangganan</span>
@@ -485,7 +501,8 @@
       </a>
 
       <!-- Item 4 -->
-      <a class="layanan-card" href="#" target="_blank">
+      <a class="layanan-card" href="https://onesearch.id/" target="_blank">
+        <div class="layanan-card__glow"></div>
         <div class="layanan-card__info">
           <span class="layanan__pill-title">IOS</span>
           <span class="layanan__pill-sub">Indonesia OneSearch by Perpusnas</span>
@@ -496,7 +513,8 @@
       </a>
 
       <!-- Item 5 -->
-      <a class="layanan-card" href="#" target="_blank">
+      <a class="layanan-card" href="https://isbn.perpusnas.go.id/landing_page/home" target="_blank">
+        <div class="layanan-card__glow"></div>
         <div class="layanan-card__info">
           <span class="layanan__pill-title">ISBN</span>
           <span class="layanan__pill-sub">International Standard Book Number</span>
@@ -507,7 +525,8 @@
       </a>
 
       <!-- Item 6 -->
-      <a class="layanan-card" href="#" target="_blank">
+      <a class="layanan-card" href="https://keanggotaan.perpusnas.go.id/" target="_blank">
+        <div class="layanan-card__glow"></div>
         <div class="layanan-card__info">
           <span class="layanan__pill-title">K-OL</span>
           <span class="layanan__pill-sub">Keanggotaan Online Perpusnas</span>
@@ -522,27 +541,35 @@
 </section>
 
   <!-- ========================= APLIKASI KAMI ========================= -->
-  <section class="aplikasi">
-    <div class="container">
-      <h2 class="aplikasi__title">APLIKASI KAMI</h2>
-      <div class="aplikasi__logos">
-        
-        <!-- Logo Selaras -->
-        <div class="aplikasi__logo">
-          <a href="https://selaras.semarangkota.go.id/" target="_blank" class="aplikasi__logo-icon">
-            <img src="{{ asset('asset/selaras.png') }}" alt="Logo Aplikasi Selaras" />
-          </a>
-        </div>
-        
-        <!-- Logo Si Booky -->
-        <div class="aplikasi__logo">
-          <a href="https://sibooky.semarangkota.go.id/" target="_blank" class="aplikasi__logo-icon">
-            <img src="{{ asset('asset/sibooky.png') }}" alt="Logo Aplikasi Si Booky" />
-          </a>
-        </div>
-
-      </div>
+<section class="aplikasi-modern">
+  <div class="container aplikasi-container">
+    
+    <!-- Judul Section dengan Standar Tema -->
+    <div class="gallery-header">
+      <h2 class="gallery-title" style="font-size: 1.8rem !important;">Aplikasi <span class="text-maroon">Kami</span></h2>
     </div>
+
+    <!-- Grid Logo Aplikasi -->
+    <div class="aplikasi__grid-modern">
+      
+      <!-- Logo Selaras -->
+      <a href="https://selaras.semarangkota.go.id/" target="_blank" class="aplikasi-card-modern">
+        <div class="aplikasi-card__glow"></div>
+        <div class="aplikasi-logo-wrapper">
+          <img src="{{ asset('asset/selaras.png') }}" alt="Logo Aplikasi Selaras" class="aplikasi-logo-img" />
+        </div>
+      </a>
+      
+      <!-- Logo Si Booky -->
+      <a href="https://sibooky.semarangkota.go.id/" target="_blank" class="aplikasi-card-modern">
+        <div class="aplikasi-card__glow"></div>
+        <div class="aplikasi-logo-wrapper">
+          <img src="{{ asset('asset/sibooky.png') }}" alt="Logo Aplikasi Si Booky" class="aplikasi-logo-img" />
+        </div>
+      </a>
+
+    </div>
+  </div>
 </section>
 
   <!-- ========================= DATA LAINNYA / FAQ ========================= -->
@@ -661,16 +688,16 @@
     <div class="container">
       <h3 class="social-section__title">Media <span style="text-decoration:underline;">Sosial</span></h3>
       <div class="social-icons">
-        <a href="#" aria-label="Instagram"><svg class="icon">
+        <a href="https://www.instagram.com/dinasarpus_semarang/" target="_blank" aria-label="Instagram"><svg class="icon">
             <use href="#icon-instagram" />
           </svg></a>
-        <a href="#" aria-label="Facebook"><svg class="icon">
+        <a href="https://www.facebook.com/groups/dinasarpus.semarangkota" target="_blank" aria-label="Facebook"><svg class="icon">
             <use href="#icon-facebook" />
           </svg></a>
-        <a href="#" aria-label="X (Twitter)"><svg class="icon">
+        <a href="https://twitter.com/dinarpus_smg" target="_blank" aria-label="X (Twitter)"><svg class="icon">
             <use href="#icon-x" />
           </svg></a>
-        <a href="#" aria-label="YouTube"><svg class="icon">
+        <a href="https://www.youtube.com/channel/UCKW_vxNCRgWO60Ny1wC_rUQ" target="_blank" aria-label="YouTube"><svg class="icon">
             <use href="#icon-youtube" />
           </svg></a>
       </div>

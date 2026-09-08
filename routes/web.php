@@ -33,3 +33,15 @@ Route::get('/FAQperpus', function () {
 Route::get('/struktur', function () {
     return view('struktur');
 })->name('struktur');
+
+Route::get('/foto', function () {
+    return view('foto');
+})->name('foto');
+
+Route::get('/video', function () {
+    return view('video');
+})->name('video');
+
+Route::get('/tentang', function () {
+    return view('tentang');
+})->name('tentang');
