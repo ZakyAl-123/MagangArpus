@@ -6,7 +6,10 @@
         
         <!-- Bagian Header Judul -->
         <div class="tupoksi-header">
-            <span class="tupoksi-subtitle">Tugas Pokok & Fungsi</span>
+            <div class="about-kp-tagline">
+                <span class="line-accent"></span>
+                Tugas Pokok dan Fungsi
+            </div>
             <h1 class="tupoksi-title">Dinas Arsip dan Perpustakaan <span class="tupoksi-accent">Kota Semarang</span></h1>
             <p class="tupoksi-desc">
                 Dalam melaksanakan tugasnya, Dinas Arsip dan Perpustakaan menyelenggarakan fungsi utama sebagai berikut:

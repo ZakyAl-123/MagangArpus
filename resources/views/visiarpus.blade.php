@@ -5,7 +5,10 @@
         
         <!-- Bagian Header Halaman -->
         <div class="vm-header">
-            <span class="vm-subtitle">Rancangan RENSTRA 2021-2026</span>
+            <div class="about-kp-tagline">
+                <span class="line-accent"></span>
+                Rancangan RENSTRA 2021-2026
+            </div>
             <h1 class="vm-title">Visi & Misi <span class="vm-accent">Badan Arsip dan Perpustakaan Kota Semarang</span></h1>
         </div>
 

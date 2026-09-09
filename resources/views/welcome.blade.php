@@ -7,7 +7,7 @@
                 <div class="showcase-top-left">
                     <div class="showcase-tagline dark-tagline">
                         <span class="line-accent-dark"></span>
-                        WEBSITE RESMI DINAS ARSIP & PERPUSTAKAAN
+                        WEBSITE RESMI DINAS ARSIP & PERPUSTAKAAN KOTA SEMARANG
                     </div>
                     <h1 class="showcase-main-title dark-title">
                         Inovasi Layanan Menuju <br>
@@ -34,22 +34,26 @@
     <div class="container showcase-container">
         <div class="showcase-bottom-overlapping">
             <div class="showcase-image-wrapper">
-                <img src="{{ asset('asset/bakgron.png') }}" alt="Gedung dan Aktivitas Dinas Arsip" class="showcase-main-img">
+                <img src="{{ asset('asset/bakgron.jpg') }}" alt="Gedung dan Aktivitas Dinas Arsip" class="showcase-main-img">
             </div>
             <div class="showcase-stats-card">
-                <div class="stat-box-item">
-                    <div class="stat-number">10K<span class="plus">+</span></div>
-                    <div class="stat-title">Arsip & Dokumen</div>
-                </div>
-                <div class="stat-box-item">
-                    <div class="stat-number">30+</div>
-                    <div class="stat-title">Tahun Pengabdian</div>
-                </div>
-                <div class="stat-box-item">
-                    <div class="stat-number">5K<span class="plus">+</span></div>
-                    <div class="stat-title">Pengunjung & Anggota</div>
-                </div>
-            </div>
+    
+    <div class="stat-box-item">
+        <div class="stat-number" data-target="8245" data-separator=".">0</div>
+        <div class="stat-title">Arsip & Dokumen</div>
+    </div>
+    
+    <div class="stat-box-item">
+        <div class="stat-number" data-target="120676" data-separator=".">0</div>
+        <div class="stat-title">Koleksi Buku</div>
+    </div>
+    
+    <div class="stat-box-item">
+        <div class="stat-number" data-target="88.9" data-decimal="1" data-suffix="%">0</div>
+        <div class="stat-title">Indeks Kepuasan Masyarakat</div>
+    </div>
+
+</div>
         </div>
     </div>
 </section>
@@ -61,20 +65,19 @@
     <!-- SET 1: Konten Utama -->
     <div class="address-content">
       <span>Jl. Prof. Sudarto No. 116, Kel.Sumurboto, Kec. Banyumanik, Kota Semarang, Jawa Tengah 50269</span>
-      <span></span> <!-- Pemisah antar kalimat -->
+      <span></span>
       <span>Jam Layanan: Senin - Kamis (08.00 - 16.00 WIB) - Jumat: 08.00 - 14.00 WIB</span>
       <span></span>
-      <span>Selamat datang di portal resmi Dinas Arsip dan Perpustakaan</span>
+      <span>Selamat datang di website resmi Dinas Arsip dan Perpustakaan Kota Semarang</span>
       <span></span>
     </div>
 
-    <!-- SET 2: Duplikat Persis dari Set 1 (Wajib ada) -->
     <div class="address-content">
       <span>Jl. Prof. Sudarto No. 116, Kel.Sumurboto, Kec. Banyumanik, Kota Semarang, Jawa Tengah 50269</span>
       <span></span> 
       <span>Jam Layanan: Senin - Kamis (08.00 - 16.00 WIB) - Jumat: 08.00 - 14.00 WIB</span>
       <span></span>
-      <span>Selamat datang di portal resmi Dinas Arsip dan Perpustakaan</span>
+      <span>Selamat datang di website resmi Dinas Arsip dan Perpustakaan Kota Semarang</span>
       <span></span>
     </div>
 
@@ -159,85 +162,129 @@
         <h3 class="sibaja-title">Sibaja</h3>
         <p class="sibaja-sub">(Senarai Istilah Budaya Jawa)</p>
     </div>
+    
     <div class="sibaja-search-box">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         <label for="sibaja-search" class="visually-hidden">Cari istilah budaya Jawa</label>
+        
+        <!-- ID input harus 'sibaja-search' -->
         <input id="sibaja-search" type="text" placeholder="Cari istilah...">
-        <svg id="mic-btn" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="cursor: pointer;" title="Cari dengan suara"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v1a7 7 0 0 1-14 0v-1"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+        
+        <span id="mic-btn" class="mic-wrapper" title="Cari dengan suara">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                <path d="M19 10v1a7 7 0 0 1-14 0v-1"></path>
+                <line x1="12" y1="19" x2="12" y2="23"></line>
+                <line x1="8" y1="23" x2="16" y2="23"></line>
+            </svg>
+        </span>
     </div>
     
-    <!-- Kotak Dropdown untuk menampilkan hasil pencarian -->
+    <!-- Wadah dropdown hasil pencarian dengan ID 'sibaja-results' -->
     <div id="sibaja-results" class="sibaja-results-dropdown" style="display: none;"></div>
-</div>
-
     </div>
   </div>
 </section>
 
-  <!-- ========================= GELIAT BERGEMA ========================= -->
-  <section class="geliat-modern">
-  <div class="container">
+<!-- ========================= GELIAT BERGEMA (MODEL ALTERNATIF) ========================= -->
+<section class="geliat-modern">
+  <div class="container geliat-container">
     
     <!-- Header Section -->
-    <div class="geliat-header">
-      <h2 class="geliat__title">GELIAT BERGEMA</h2>
+    <div class="gallery-header">
+      <h2 class="gallery-title">GELIAT <span class="text-maroon">BERGEMA</span></h2>
       <div class="geliat__subs">
         <p>Gerakan Literasi Atraktif Bergerak Bersama</p>
         <p>Gerakan Peduli Arsip Terpadu Bergerak Bersama</p>
       </div>
     </div>
 
-    <!-- Grid Menu (Total 6 Menu termasuk SABDA) -->
-    <div class="geliat__actions">
+    <!-- Grid Menu Alternatif (3 Kolom x 2 Baris) -->
+    <div class="geliat__actions-alt">
       
       <!-- 1. Cari Buku -->
-      <a class="geliat__action-card" href="https://arpusda.semarangkota.go.id/sicaper"">
-        <div class="geliat__action-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+      <a class="geliat-card-alt" href="https://arpusda.semarangkota.go.id/sicaper" target="_blank">
+        <div class="geliat-alt__icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
         </div>
-        <span class="geliat__action-label">Cari Buku</span>
+        <div class="geliat-alt__content">
+          <span class="geliat-alt__label">Cari Buku</span>
+          <span class="geliat-alt__desc">Temukan koleksi pustaka</span>
+        </div>
+        <div class="geliat-alt__arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </div>
       </a>
 
       <!-- 2. Cari Arsip -->
-      <a class="geliat__action-card" href="https://selaras.semarangkota.go.id/">
-        <div class="geliat__action-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+      <a class="geliat-card-alt" href="https://selaras.semarangkota.go.id/" target="_blank">
+        <div class="geliat-alt__icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
         </div>
-        <span class="geliat__action-label">Cari Arsip</span>
+        <div class="geliat-alt__content">
+          <span class="geliat-alt__label">Cari Arsip</span>
+          <span class="geliat-alt__desc">Layanan arsip terpadu</span>
+        </div>
+        <div class="geliat-alt__arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </div>
       </a>
 
       <!-- 3. Cari Peraturan -->
-      <a class="geliat__action-card" href="https://arpusda.semarangkota.go.id/sicatur">
-        <div class="geliat__action-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+      <a class="geliat-card-alt" href="https://arpusda.semarangkota.go.id/sicatur" target="_blank">
+        <div class="geliat-alt__icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
         </div>
-        <span class="geliat__action-label">Cari Peraturan</span>
+        <div class="geliat-alt__content">
+          <span class="geliat-alt__label">Cari Peraturan</span>
+          <span class="geliat-alt__desc">Regulasi & kebijakan</span>
+        </div>
+        <div class="geliat-alt__arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </div>
       </a>
 
       <!-- 4. Usulan Buku -->
-      <a class="geliat__action-card" href="https://arpusda.semarangkota.go.id/siulan">
-        <div class="geliat__action-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+      <a class="geliat-card-alt" href="https://arpusda.semarangkota.go.id/siulan" target="_blank">
+        <div class="geliat-alt__icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
         </div>
-        <span class="geliat__action-label">Usulan Buku</span>
+        <div class="geliat-alt__content">
+          <span class="geliat-alt__label">Usulan Buku</span>
+          <span class="geliat-alt__desc">Ajukan pengadaan judul baru</span>
+        </div>
+        <div class="geliat-alt__arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </div>
       </a>
 
       <!-- 5. Donasi Buku -->
-      <a class="geliat__action-card" href="https://arpusda.semarangkota.go.id/sidoku">
-        <div class="geliat__action-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+      <a class="geliat-card-alt" href="https://arpusda.semarangkota.go.id/sidoku" target="_blank">
+        <div class="geliat-alt__icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
         </div>
-        <span class="geliat__action-label">Donasi Buku</span>
+        <div class="geliat-alt__content">
+          <span class="geliat-alt__label">Donasi Buku</span>
+          <span class="geliat-alt__desc">Mari berbagi literasi</span>
+        </div>
+        <div class="geliat-alt__arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </div>
       </a>
 
-      <!-- 6. Menu Baru: SABDA (Menggunakan Gambar) -->
-      <a class="geliat__action-card" href="https://bastra.kemendikdasmen.go.id/sabda/">
-        <div class="geliat__action-icon img-icon">
+      <!-- 6. SABDA -->
+      <a class="geliat-card-alt" href="https://bastra.kemendikdasmen.go.id/sabda/" target="_blank">
+        <div class="geliat-alt__icon img-icon">
           <img src="{{ asset('asset/sabda.png') }}" alt="SABDA">
         </div>
-        <span class="geliat__action-label">SABDA</span>
+        <div class="geliat-alt__content">
+          <span class="geliat-alt__label">SABDA</span>
+          <span class="geliat-alt__desc">Belajar Bahasa Daerah</span>
+        </div>
+        <div class="geliat-alt__arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </div>
       </a>
-
     </div>
   </div>
 </section>
@@ -253,99 +300,129 @@
         <p class="section-subtitle">Baru ditambahkan ke perpustakaan</p>
       </div>
       <div class="section-actions">
-        <a href="https://sibooky.semarangkota.go.id/" target="_blank" class="btn-lihat-semua">Lihat semua &gt;</a>
+        <a href="https://sibooky.semarangkota.go.id/katalog?format=ebook" target="_blank" class="btn-lihat-semua">Lihat semua &gt;</a>
       </div>
     </div>
 
-    <!-- Grid Buku Modern -->
-    <div class="book-grid-modern">
+    <!-- Grid Buku Modern (Setema) -->
+<div class="book-grid-modern">
       
-      <!-- Buku 1 -->
-      <article class="book-card-mod">
-        <div class="book-thumb">
-          <img src="{{ asset('asset/buku1.jpg') }}" alt="sejarah">
-        </div>
-        <div class="book-info">
-          <h4 class="book-title">Semarang dari Masa ke Masa</h4>
-          <p class="book-author">Badan Arpus Provinsi Jateng</p>
-          <span class="book-views">👁 138</span>
-        </div>
-        <div class="book-actions">
-          <button class="action-btn" title="Detail"><i class="icon-info">ℹ</i></button>
-          <button class="action-btn" title="Suka"><i class="icon-love">❤</i></button>
-          <button class="action-btn bookmark" title="Simpan"><i class="icon-bookmark">🔖</i></button>
-        </div>
-      </article>
-
-      <!-- Buku 2 -->
-      <article class="book-card-mod">
-        <div class="book-thumb">
-          <img src="{{ asset('asset/tradisingaliyan.jpg') }}" alt="Pulang">
-        </div>
-        <div class="book-info">
-          <h4 class="book-title">Tradisi dari Ngaliyan</h4>
-          <p class="book-author">Sucipto Hadi Purnomo</p>
-          <span class="book-views">👁 190</span>
-        </div>
-        <div class="book-actions">
-          <button class="action-btn"><i class="icon-info">ℹ</i></button>
-          <button class="action-btn"><i class="icon-love">❤</i></button>
-          <button class="action-btn bookmark"><i class="icon-bookmark">🔖</i></button>
-        </div>
-      </article>
-
-      <!-- Buku 3 -->
-      <article class="book-card-mod">
-        <div class="book-thumb">
-          <img src="{{ asset('asset/tembalang.jpg') }}" alt="Tentang Kamu">
-        </div>
-        <div class="book-info">
-          <h4 class="book-title">Tradisi dari Tembalang</h4>
-          <p class="book-author">Sucipto Hadi Purnomo</p>
-          <span class="book-views">👁 102</span>
-        </div>
-        <div class="book-actions">
-          <button class="action-btn"><i class="icon-info">ℹ</i></button>
-          <button class="action-btn"><i class="icon-love">❤</i></button>
-          <button class="action-btn bookmark"><i class="icon-bookmark">🔖</i></button>
-        </div>
-      </article>
-
-      <!-- Buku 4 -->
-      <article class="book-card-mod">
-        <div class="book-thumb">
-          <img src="{{ asset('asset/heart.jpg') }}" alt="Rindu">
-        </div>
-        <div class="book-info">
-          <h4 class="book-title">Silent Heart</h4>
-          <p class="book-author">Rudiyant</p>
-          <span class="book-views">👁 96</span>
-        </div>
-        <div class="book-actions">
-          <button class="action-btn"><i class="icon-info">ℹ</i></button>
-          <button class="action-btn"><i class="icon-love">❤</i></button>
-          <button class="action-btn bookmark"><i class="icon-bookmark">🔖</i></button>
-        </div>
-      </article>
-
-      <!-- Buku 5 -->
-      <article class="book-card-mod">
-        <div class="book-thumb">
-          <img src="{{ asset('asset/kubur.jpg') }}" alt="Hujan">
-        </div>
-        <div class="book-info">
-          <h4 class="book-title">1001 Siksa Kubur</h4>
-          <p class="book-author">Abdul Rahman</p>
-          <span class="book-views">👁 148</span>
-        </div>
-        <div class="book-actions">
-          <button class="action-btn"><i class="icon-info">ℹ</i></button>
-          <button class="action-btn"><i class="icon-love">❤</i></button>
-          <button class="action-btn bookmark"><i class="icon-bookmark">🔖</i></button>
-        </div>
-      </article>
-
+  <!-- Buku 1 -->
+  <article class="book-card-mod">
+    <div class="book-thumb">
+      <img src="{{ asset('asset/buku1.jpg') }}" alt="sejarah">
+      <div class="book-overlay-badge">Populer</div>
     </div>
+    <div class="book-info">
+      <h4 class="book-title">Semarang dari Masa ke Masa</h4>
+      <p class="book-author">Badan Arpus Provinsi Jateng</p>
+      <span class="book-views">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+        138 Dilihat
+      </span>
+    </div>
+    <div class="book-actions">
+      <a href="https://sibooky.semarangkota.go.id/katalog/semarang-dari-masa-ke-masa-4040-baca" target="_blank" class="action-btn" title="Detail">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+  </a>
+      <button class="action-btn" title="Suka"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+      <button class="action-btn bookmark" title="Simpan"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></button>
+    </div>
+  </article>
+
+  <!-- Buku 2 -->
+  <article class="book-card-mod">
+    <div class="book-thumb">
+      <img src="{{ asset('asset/tradisingaliyan.jpg') }}" alt="Pulang">
+      <div class="book-overlay-badge">Budaya</div>
+    </div>
+    <div class="book-info">
+      <h4 class="book-title">Tradisi dari Ngaliyan</h4>
+      <p class="book-author">Sucipto Hadi Purnomo</p>
+      <span class="book-views">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+        190 Dilihat
+      </span>
+    </div>
+    <div class="book-actions">
+      <a href="https://sibooky.semarangkota.go.id/katalog/serial-tradisi-kota-semarang-tradisi-dari-ngaliyan-4026-baca" target="_blank" class="action-btn" title="Detail">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+  </a>
+      <button class="action-btn" title="Suka"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+      <button class="action-btn bookmark" title="Simpan"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></button>
+    </div>
+  </article>
+
+  <!-- Buku 3 -->
+  <article class="book-card-mod">
+    <div class="book-thumb">
+      <img src="{{ asset('asset/tembalang.jpg') }}" alt="Tentang Kamu">
+      <div class="book-overlay-badge">Budaya</div>
+    </div>
+    <div class="book-info">
+      <h4 class="book-title">Tradisi dari Tembalang</h4>
+      <p class="book-author">Sucipto Hadi Purnomo</p>
+      <span class="book-views">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+        102 Dilihat
+      </span>
+    </div>
+    <div class="book-actions">
+      <a href="https://sibooky.semarangkota.go.id/katalog/tradisi-dari-tembalang-4052-baca" target="_blank" class="action-btn" title="Detail">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+  </a>
+      <button class="action-btn" title="Suka"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+      <button class="action-btn bookmark" title="Simpan"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></button>
+    </div>
+  </article>
+
+  <!-- Buku 4 -->
+  <article class="book-card-mod">
+    <div class="book-thumb">
+      <img src="{{ asset('asset/heart.jpg') }}" alt="Rindu">
+      <div class="book-overlay-badge gold-badge">Novel</div>
+    </div>
+    <div class="book-info">
+      <h4 class="book-title">Silent Heart</h4>
+      <p class="book-author">Rudiyant</p>
+      <span class="book-views">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+        96 Dilihat
+      </span>
+    </div>
+    <div class="book-actions">
+      <a href="https://sibooky.semarangkota.go.id/katalog/silent-heart-2382-baca" target="_blank" class="action-btn" title="Detail">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+  </a>
+      <button class="action-btn" title="Suka"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+      <button class="action-btn bookmark" title="Simpan"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></button>
+    </div>
+  </article>
+
+  <!-- Buku 5 -->
+  <article class="book-card-mod">
+    <div class="book-thumb">
+      <img src="{{ asset('asset/kubur.jpg') }}" alt="Hujan">
+      <div class="book-overlay-badge">Religi</div>
+    </div>
+    <div class="book-info">
+      <h4 class="book-title">1001 Siksa Kubur</h4>
+      <p class="book-author">Abdul Rahman</p>
+      <span class="book-views">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+        148 Dilihat
+      </span>
+    </div>
+    <div class="book-actions">
+      <a href="https://sibooky.semarangkota.go.id/katalog/1001-siksa-kubur-2215-baca" target="_blank" class="action-btn" title="Detail">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+  </a>
+      <button class="action-btn" title="Suka"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+      <button class="action-btn bookmark" title="Simpan"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></button>
+    </div>
+  </article>
+
+</div>
 
 <!-- ================= Bagian Berita Terbaru ================= -->
       <div class="section-header-flex" style="margin-top: 48px;">
@@ -354,7 +431,7 @@
           <p class="section-subtitle">Informasi dan kegiatan Dinarpus</p>
         </div>
         <div class="section-actions">
-          <a href="#" class="btn-lihat-semua">Lihat semua &gt;</a>
+          <a href="{{ route('berita') }}" class="btn-lihat-semua">Lihat semua &gt;</a>
         </div>
       </div>
 
@@ -363,11 +440,11 @@
         <!-- Berita 1 -->
         <article class="berita-card-mod">
           <div class="berita-thumb">
-            <img src="{{ asset('asset/berita-1.jpg') }}" alt="Foto Berita">
+            <img src="{{ asset('asset/bakgron.jpg') }}" alt="Foto Berita">
           </div>
           <div class="berita-info">
-            <h4 class="berita-title">BANGUNAN LAWANG SEWU SEMARANG TERKINI - Wisata Kota Semarang</h4>
-            <p class="berita-desc">Terimakasih buat teman-teman yang sudah nonton video ini mengenai cerita Backpacker Keliling Indonesia dari Sabang ke...</p>
+            <h4 class="berita-title">Optimalisasi Pengelolaan Arsip Daerah Menuju Era Digitalisasi Modern</h4>
+            <p class="berita-desc">Dinas Arsip dan Perpustakaan terus meningkatkan kualitas tata naskah dinas serta penyelamatan memori kolektif daerah...</p>
             <span class="berita-date">14 Mei 2025</span>
           </div>
         </article>
@@ -375,11 +452,11 @@
         <!-- Berita 2 -->
         <article class="berita-card-mod">
           <div class="berita-thumb">
-            <img src="{{ asset('asset/berita-2.jpg') }}" alt="Foto Berita">
+            <img src="{{ asset('asset/arpus.jpg') }}" alt="Foto Berita">
           </div>
           <div class="berita-info">
-            <h4 class="berita-title">Trip Tektok Seharian Keliling Kota Semarang</h4>
-            <p class="berita-desc">Ini adalah pertama kalinya saya berada di Kota Semarang, dan hari ini kita bakal seharian penuh jalan-jalan keliling kota, mengunjun...</p>
+            <h4 class="berita-title">Peningkatan Minat Baca Melalui Revitalisasi Ruang Baca Digital</h4>
+            <p class="berita-desc">Fasilitas ruang baca digital kini hadir dengan koleksi e-book interaktif yang ramah bagi pelajar dan masyarakat umum...</p>
             <span class="berita-date">14 Mei 2025</span>
           </div>
         </article>
@@ -387,11 +464,11 @@
         <!-- Berita 3 -->
         <article class="berita-card-mod">
           <div class="berita-thumb">
-            <img src="{{ asset('asset/berita-3.jpg') }}" alt="Foto Berita">
+            <img src="{{ asset('asset/Card Background Image.png') }}" alt="Foto Berita">
           </div>
           <div class="berita-info">
-            <h4 class="berita-title">CIMORY SEMARANG Selalu Bikin Penasaran ! || Wisata Cimory Semarang</h4>
-            <p class="berita-desc">Ayo kita cek ada apa yang baru di Cimory Semarang! Wisata Cimory Dairyland On The Valley Semarang ini selalu melakukan...</p>
+            <h4 class="berita-title">Seminar Internasional Naskah Kuno dan Pelestarian Budaya Nusantara</h4>
+            <p class="berita-desc">Menbedah warisan leluhur bangsa melalui manuskrip kuno guna memperkuat identitas budaya serta literasi sejarah...</p>
             <span class="berita-date">14 Mei 2025</span>
           </div>
         </article>
@@ -684,23 +761,58 @@
 </section>
 
   <!-- ========================= MEDIA SOSIAL ========================= -->
-  <section class="social-section">
-    <div class="container">
-      <h3 class="social-section__title">Media <span style="text-decoration:underline;">Sosial</span></h3>
-      <div class="social-icons">
-        <a href="https://www.instagram.com/dinasarpus_semarang/" target="_blank" aria-label="Instagram"><svg class="icon">
-            <use href="#icon-instagram" />
-          </svg></a>
-        <a href="https://www.facebook.com/groups/dinasarpus.semarangkota" target="_blank" aria-label="Facebook"><svg class="icon">
-            <use href="#icon-facebook" />
-          </svg></a>
-        <a href="https://twitter.com/dinarpus_smg" target="_blank" aria-label="X (Twitter)"><svg class="icon">
-            <use href="#icon-x" />
-          </svg></a>
-        <a href="https://www.youtube.com/channel/UCKW_vxNCRgWO60Ny1wC_rUQ" target="_blank" aria-label="YouTube"><svg class="icon">
-            <use href="#icon-youtube" />
-          </svg></a>
-      </div>
+<section class="social-section-modern">
+  <div class="container social-container">
+    
+    <!-- Judul Section dengan Standar Tema -->
+    <div class="gallery-header">
+      <h2 class="gallery-title" style="font-size: 1.8rem !important;"> Media <span class="text-maroon">Sosial</span></h2>
     </div>
-  </section>
+
+    <!-- Daftar Ikon Media Sosial -->
+    <div class="social-icons-modern">
+      
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/dinasarpus_semarang/" target="_blank" class="social-icon-btn instagram" aria-label="Instagram">
+        <div class="social-glow"></div>
+        <svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+        <span class="social-tooltip">Instagram</span>
+      </a>
+
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/groups/dinasarpus.semarangkota" target="_blank" class="social-icon-btn facebook" aria-label="Facebook">
+        <div class="social-glow"></div>
+        <svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+        </svg>
+        <span class="social-tooltip">Facebook</span>
+      </a>
+
+      <!-- X (Twitter) -->
+      <a href="https://twitter.com/dinarpus_smg" target="_blank" class="social-icon-btn twitter" aria-label="X (Twitter)">
+        <div class="social-glow"></div>
+        <svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+          <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+        </svg>
+        <span class="social-tooltip">X (Twitter)</span>
+      </a>
+
+      <!-- YouTube -->
+      <a href="https://www.youtube.com/channel/UCKW_vxNCRgWO60Ny1wC_rUQ" target="_blank" class="social-icon-btn youtube" aria-label="YouTube">
+        <div class="social-glow"></div>
+        <svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"></path>
+          <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor"></polygon>
+        </svg>
+        <span class="social-tooltip">YouTube</span>
+      </a>
+
+    </div>
+  </div>
+</section>
 @include('layouts.footer')

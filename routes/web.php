@@ -45,3 +45,11 @@ Route::get('/video', function () {
 Route::get('/tentang', function () {
     return view('tentang');
 })->name('tentang');
+
+Route::get('/berita', function () {
+    return view('berita');
+})->name('berita');
+
+Route::get('/kontak', function () {
+    return view('kontak');
+})->name('kontak');

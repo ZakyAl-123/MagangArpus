@@ -97,7 +97,7 @@
 
           <!-- PROFIL (Menyala jika salah satu halaman profil sedang dibuka) -->
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle {{ request()->routeIs('visikota', 'visiarpus', 'tupoksi', 'struktur') ? 'active' : '' }}">
+            <a href="#" class="dropdown-toggle {{ request()->routeIs('visikota', 'visiarpus', 'tupoksi', 'struktur','tentang') ? 'active' : '' }}">
               PROFIL <span class="arrow">&#9662;</span>
             </a>
             <ul class="dropdown-menu">
@@ -122,9 +122,9 @@
               <li><a href="{{ route('FAQperpus') }}" class="{{ request()->routeIs('FAQperpus') ? 'active-sub' : '' }}">Perpustakaan</a></li>
             </ul>
           </li>
-
-          <!-- KONTAK -->
-          <li><a href="#kontak">KONTAK</a></li>
+<li>
+    <a href="{{ route('kontak') }}" class="{{ request()->routeIs('kontak') ? 'active' : '' }}">KONTAK</a>
+</li>
 
         </ul>
       </nav>

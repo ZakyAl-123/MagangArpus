@@ -36,7 +36,7 @@
             <!-- Kolom 2: Perpustakaan -->
             <div class="about-kp-card">
                 <div class="about-kp-img-wrapper">
-                    <img src="{{ asset('asset/bakgron.png') }}" alt="Ilustrasi Perpustakaan" class="about-kp-img">
+                    <img src="{{ asset('asset/bakgron.jpg') }}" alt="Ilustrasi Perpustakaan" class="about-kp-img">
                     <div class="about-kp-badge gold-badge">Pustaka & Digital</div>
                 </div>
                 <div class="about-kp-content">

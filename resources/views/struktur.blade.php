@@ -6,7 +6,10 @@
         
         <!-- Bagian Header Halaman -->
         <div class="org-header">
-            <span class="org-subtitle">Bagan Organisasi Dinas</span>
+            <div class="about-kp-tagline">
+                <span class="line-accent"></span>
+                Bagan Organisasi Dinas
+            </div>
             <h1 class="org-title">Struktur Organisasi <span class="org-accent">Dinas Arsip & Perpustakaan</span></h1>
             <p class="org-desc">
                 Berdasarkan Peraturan Walikota Semarang Nomor 112 Tahun 2021 tentang Kedudukan, Susunan Organisasi, Tugas dan Fungsi Serta Sistem Kerja Dinas Arsip dan Perpustakaan Kota Semarang.
