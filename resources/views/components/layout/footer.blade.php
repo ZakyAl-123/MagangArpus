@@ -88,7 +88,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.asikmas.semarangkota.go.id/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://asikmas.semarangkota.go.id/index.php/pub/index/ad760eade0a47dce6fd3f34f3dc757aa" target="_blank" rel="noopener noreferrer">
                             Survey Layanan (ASIKMAS) <svg class="icon" aria-hidden="true"><use href="#icon-external" /></svg>
                         </a>
                     </li>
