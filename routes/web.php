@@ -1,55 +1,54 @@
 <?php
 
+use App\Http\Controllers\BerandaController;
+use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\FaqController;
+use App\Http\Controllers\GaleriController;
+use App\Http\Controllers\KontakController;
+use App\Http\Controllers\PencarianController;
+use App\Http\Controllers\ProfilController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
+/*
+|--------------------------------------------------------------------------
+| Web Routes - Dinas Arsip dan Perpustakaan Kota Semarang
+|--------------------------------------------------------------------------
+*/
+
+// Beranda / Landing Page
+Route::get('/', [BerandaController::class, 'index'])->name('home');
+Route::get('/welcome', [BerandaController::class, 'index'])->name('dashboard');
+
+// Profil Dinas
+Route::controller(ProfilController::class)->group(function () {
+    Route::get('/visikota', 'visiKota')->name('visikota');
+    Route::get('/visiarpus', 'visiArpus')->name('visiarpus');
+    Route::get('/tupoksi', 'tupoksi')->name('tupoksi');
+    Route::get('/struktur', 'struktur')->name('struktur');
+    Route::get('/tentang', 'tentang')->name('tentang');
 });
 
-Route::get('/welcome', function () {
-    return view('welcome');
-})->name('dashboard');
+// FAQ (Frequently Asked Questions)
+Route::controller(FaqController::class)->group(function () {
+    Route::get('/FAQarsip', 'arsip')->name('FAQarsip');
+    Route::get('/FAQperpus', 'perpus')->name('FAQperpus');
+});
 
-Route::get('/visikota', function () {
-    return view('visikota');
-})->name('visikota');
+// Galeri & Koleksi Arsip
+Route::controller(GaleriController::class)->group(function () {
+    Route::get('/foto', 'foto')->name('foto');
+    Route::get('/video', 'video')->name('video');
+    Route::get('/arsip', 'arsip')->name('arsip');
+});
 
-Route::get('/visiarpus', function () {
-    return view('visiarpus');
-})->name('visiarpus');
+// Berita & Publikasi
+Route::get('/berita', [BeritaController::class, 'index'])->name('berita');
 
-Route::get('/tupoksi', function () {
-    return view('tupoksi');
-})->name('tupoksi');
+// Kontak & Pengaduan
+Route::controller(KontakController::class)->group(function () {
+    Route::get('/kontak', 'index')->name('kontak');
+    Route::post('/kontak', 'submit')->name('kontak.submit');
+});
 
-Route::get('/FAQarsip', function () {
-    return view('FAQarsip');
-})->name('FAQarsip');
-
-Route::get('/FAQperpus', function () {
-    return view('FAQperpus');
-})->name('FAQperpus');
-
-Route::get('/struktur', function () {
-    return view('struktur');
-})->name('struktur');
-
-Route::get('/foto', function () {
-    return view('foto');
-})->name('foto');
-
-Route::get('/video', function () {
-    return view('video');
-})->name('video');
-
-Route::get('/tentang', function () {
-    return view('tentang');
-})->name('tentang');
-
-Route::get('/berita', function () {
-    return view('berita');
-})->name('berita');
-
-Route::get('/kontak', function () {
-    return view('kontak');
-})->name('kontak');
+// API / Async Search Endpoint
+Route::get('/api/sibaja/search', [PencarianController::class, 'searchSibaja'])->name('api.sibaja.search');

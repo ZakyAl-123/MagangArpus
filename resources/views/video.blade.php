@@ -1,38 +1,31 @@
-<!-- ========================= VIDEO GALERI SECTION ========================= -->
-@include('layouts.header')
-<section class="video-gallery-section">
-    <div class="container">
-        
-        <!-- Judul Section -->
-        <div class="gallery-header">
-            <h2 class="gallery-title">Video <span class="text-maroon">Arpusda</span></h2>
+<x-layout.app title="Galeri Video Publikasi | Dinas Arpusda Kota Semarang">
+    <section class="video-gallery-section" aria-label="Galeri Video Publikasi dan Dokumentasi">
+        <div class="container">
+            <!-- Judul Section -->
+            <div class="section-header">
+                <div class="gallery-tagline">
+                    <span class="line-accent" aria-hidden="true"></span>
+                    <span>PUBLIKASI AUDIO VISUAL</span>
+                </div>
+                <h1 class="section-title">Video <span class="text-maroon">Arpusda</span></h1>
+            </div>
+
+            <!-- Grid Video YouTube -->
+            <div class="video-grid">
+                @foreach($videos as $video)
+                    <div class="video-item">
+                        <div class="video-wrapper">
+                            <iframe
+                                src="{{ $video['embed_url'] }}"
+                                title="{{ $video['title'] }}"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
         </div>
-
-        <!-- Grid Video YouTube (Responsif & Tanpa Deskripsi) -->
-        <div class="video-grid">
-            
-            <!-- Item Video 1 -->
-            <div class="video-item">
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/8cLyuxUIj_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-
-            <!-- Item Video 2 -->
-            <div class="video-item">
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/aTcjI4nnDnU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-
-            <!-- Item Video 3 -->
-            <div class="video-item">
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/gL81MXIIdOQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-@include('layouts.footer')
+    </section>
+</x-layout.app>
